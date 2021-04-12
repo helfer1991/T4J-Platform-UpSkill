@@ -9,7 +9,7 @@
 ## Roadmap
 
 | Casos de uso                      |  [Ver](Sprint/FicheirosProjeto/IT1/README.md) |
-|-----------------------------|------------|--------|------|
+|-----------------------------|------------------|
 | Diagrama Casos de Uso (DUC) |  [Ver](Sprint/FicheirosProjeto/IT1/DUC.svg) |
 | Glossário  |  [Ver](Sprint/FicheirosProjeto/IT1/Glossario.md)  | 
 | Especificação Suplementar   |  [Ver](Sprint/FicheirosProjeto/IT1/FURPS.md) |   
