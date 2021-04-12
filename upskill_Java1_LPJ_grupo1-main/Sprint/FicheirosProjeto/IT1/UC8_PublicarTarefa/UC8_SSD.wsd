@@ -1,0 +1,36 @@
+@startuml
+autonumber
+actor "Colaborador" as COL
+
+participant ":Sistema" as SIST
+
+activate COL
+
+    COL -> SIST : inicia a publicação de uma tarefa
+
+    activate SIST
+        SIST --> COL : solicita identificação da tarefa previamente criada
+    deactivate SIST
+
+    COL -> SIST : introduz a identificação da tarefa
+    
+    activate SIST
+        SIST --> COL : solicita dados para a publicação da tarefa \n(i.e. período de publicitação, período de apresentação de candidaturas, \nperíodo de seriação, e tipo de regimento aplicável)
+    deactivate SIST
+
+    COL -> SIST : introduz os dados solicitados
+    
+    activate SIST
+        SIST --> COL : apresenta os dados e solicita confirmação
+    deactivate SIST
+
+    COL -> SIST : confirma
+	
+
+    activate SIST
+        SIST --> COL : cria um anúncio e informa do sucesso da operação
+    deactivate SIST
+
+deactivate COL
+
+@enduml

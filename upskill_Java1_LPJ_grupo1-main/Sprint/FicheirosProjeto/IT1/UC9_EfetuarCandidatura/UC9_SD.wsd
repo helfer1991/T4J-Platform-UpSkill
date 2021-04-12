@@ -1,0 +1,64 @@
+@startuml
+autonumber
+
+actor "Freelancer" as FRL
+participant ":RegistarCandidaturaUI" as UI
+participant ":RegistarCandidaturaController" as CTRL
+participant ":Plataforma" as PLAT
+participant ": UsersAPI" as UAPI
+participant "anu:\nAnuncio" as ANUN
+participant "cand:\nCandidatura" as CAND
+database RepositorioFreelancerDB as freeDB
+database RepositorioAnuncioDB as anunDB
+database RepositorioCandidaturaDB as candDB
+
+
+activate FRL
+FRL -> UI : inicia registar candidatura
+activate UI
+
+UI -> CTRL : listaAnu = getAllAnunciosDisponiveis()
+activate CTRL
+
+CTRL -> PLAT : email = getEmail()
+activate PLAT
+PLAT -> UAPI : getEmail()
+activate UAPI
+deactivate UAPI
+deactivate PLAT
+CTRL -> freeDB : free = find(email)
+activate freeDB
+deactivate freeDB
+
+CTRL -> anunDB : listaAnu=getAllAnunciosDisponiveis()
+activate anunDB
+deactivate anunDB
+deactivate CTRL
+
+UI --> FRL : seleccionar anuncio da lista de anuncios elegiveis
+deactivate UI
+FRL -> UI : iniciar candidatura a anuncio elegivel
+activate UI
+UI --> FRL : solicita dados da candidatura \n(valor,nrDias,txtApresentacaoentacao,txtMotivacaoacao)
+deactivate UI
+
+FRL -> UI : introduz os dados solicitados \n(valor,nrDias,txtApresentacao,txtMotivacao)
+activate UI
+
+UI --> FRL : apresenta dados da candidatura e solicita confirmacao
+deactivate UI
+
+FRL -> UI : confirma dados da candidatura
+activate UI
+UI -> CTRL : registarCandidatura(anun,free,dataCand,valor,nrDias,txtApresentacao,txtMotivacao,free)
+activate CTRL
+CTRL -> CTRL : isFreelancerElegivel(free)
+CTRL --> CAND**: cand = create(free,dataCand,valor,nrDias,txtApresentacao,txtMotivacao)
+CTRL -> candDB : save(cand)
+activate candDB
+deactivate candDB
+UI --> FRL: informa do sucesso da operacao
+deactivate CTRL
+deactivate UI
+
+@enduml

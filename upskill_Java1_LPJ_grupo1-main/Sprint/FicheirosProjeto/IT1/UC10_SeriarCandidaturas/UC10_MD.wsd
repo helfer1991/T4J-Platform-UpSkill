@@ -1,0 +1,91 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+class Plataforma {
+  -String designacao
+}
+
+class Organizacao {
+  -String nome
+  -String NIF
+  -String website
+  -String telefone
+  -String email
+}
+
+class Colaborador {
+  -String nome
+  -String funcao
+  -String telefone
+  -String email
+}
+
+class TipoRegimento
+{
+    -String designacao
+    -String descricaoRegras
+}
+
+
+class Freelancer {
+    -String nome
+    -String NIF
+    -String telefone
+    -String email
+}
+
+class Anuncio
+{
+    -Date dtInicioPublicitacao
+    -Date dtFimPublicitacao
+    -Date dtInicioCandidatura
+    -Date dtFimCandidatura
+    -Date dtInicioSeriacao
+    -Date dtFimSeriacao
+}
+
+class Candidatura
+{
+    -Date dataCandidatura
+    -Double valorPretendido
+    -Integer nrDias
+    -String txtApresentacao
+    -String txtMotivacao
+}
+
+class Classificacao
+{
+    -Integer lugar
+}
+
+class ProcessoSeriacao
+{
+    -Date dataRealizacao
+}
+
+
+Plataforma "1" -- "*" Organizacao : tem registadas >
+Plataforma "1" -- "*" TipoRegimento : suporta >
+Plataforma "1" -- "*" Anuncio : publicita >
+Plataforma "1" -- "*" Freelancer : tem/usa  >
+
+Organizacao "1" -- "1..*" Colaborador: tem >
+
+Anuncio "*" -- "1" TipoRegimento: rege-se por >
+Anuncio "*" -- "1" Colaborador: publicado por >
+Anuncio "1" -- "*" Candidatura: recebe >
+Anuncio "1" -- "0..1" ProcessoSeriacao: espoleta >
+
+Candidatura "*" -- "1"  Freelancer: realizada por >
+
+ProcessoSeriacao "*" -- "1" TipoRegimento: decorre em concordância com >
+ProcessoSeriacao "1" -- "1..*" Colaborador: realizado por >
+ProcessoSeriacao "1" -- "*" Classificacao: resulta >
+
+Classificacao "0..1" -- "1" Candidatura: referente a >
+
+
+@enduml

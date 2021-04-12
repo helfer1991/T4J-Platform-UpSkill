@@ -1,0 +1,108 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+left to right direction
+
+class RegistarFreelancerUI {
+    
+}
+
+class RegistarFreelancerController {    
+  +registarFrelancer(nome, nif, endpost, tele, email, lHab, lRec)
+  +EnderecoPostal registarEnderecoPostal(morada, codPostal, localidade)
+  +registaFreelancer()  
+  +HabilitacaoAcademica registarHabilitacaoAcademica(grau, descCurso, instituicao, medCurso)
+  +ReconhecimentoCT ReconhecimentoCT(data, compTecnica, grauProficiencia)
+}
+
+class Plataforma {
+  +getAlgoritmoGeradorPwd()
+  +getUsersAPI()
+}
+
+class CompetenciaTecnica {
+  -String codigo
+  -String descBreve
+  -String descDetalhada
+  +getGrauProficiencia(valorGP)
+}
+
+class GrauProficiencia {
+  -String valor
+  -String designacao
+}
+
+class Freelancer {
+  -String nome
+  -String NIF
+  -String telefone
+  -String email
+   +Freelancer(nome, nif, endpost, tele, email)
+}
+
+class HabilitacaoAcademica {
+  -String grau
+  -String designacao 
+  -String instituicao 
+  -String media
+  +HabilitacaoAcademica(grau, descCurso, instituicao, medCurso)
+}
+
+class ReconhecimentoCompetenciaTecnica {
+  -String data
+  -String competenciaTecnica
+  -String grauProficiencia  
+  +ReconhecimentoCT(data, compTecnica, grauProficiencia)
+}
+
+class EnderecoPostal {
+  -String local
+  -String codPostal
+  -String localidade  
+  +EnderecoPostal(morada), codPostal, localidade)
+}
+
+
+class Utilizador {
+  -String nome
+  -String email
+  -String password
+}
+
+class UsersAPI {
+   +registerUserWithRoles(nome,email,pwd,funcao)
+}
+
+interface AlgoritmoGeradorPasswords  <<interface>>{
+  +geraPassword(nome,email)
+}
+
+class RepositorioFreelancerDB {
+  +save(Freelancer free)
+}
+
+
+RegistarFreelancerUI ..> RegistarFreelancerController
+RegistarFreelancerController ..> Plataforma
+RegistarFreelancerController ..> RepositorioFreelancerDB
+RegistarFreelancerController ..> Freelancer
+RegistarFreelancerController ..> ReconhecimentoCompetenciaTecnica
+RegistarFreelancerController ..> HabilitacaoAcademica
+Plataforma  "1" --> "*" CompetenciaTecnica : tem
+Plataforma  "1" --> "*" Freelancer : tem registados
+Plataforma ..> UsersAPI
+
+Freelancer "1" --> "0..*" HabilitacaoAcademica: tem
+Freelancer "1" --> "0..*" ReconhecimentoCompetenciaTecnica: recebe(u)
+Freelancer "1" --> "1" EnderecoPostal: tem
+Freelancer "0..1" --> "1" Utilizador: atua como
+
+CompetenciaTecnica "1" --> "*" GrauProficiencia: aplica >
+
+AlgoritmoGeradorPasswords "1" -- "0..*" Utilizador: gera password >
+
+AlgoritmoGeradorPasswords <.l. Freelancer
+
+
+
+@enduml

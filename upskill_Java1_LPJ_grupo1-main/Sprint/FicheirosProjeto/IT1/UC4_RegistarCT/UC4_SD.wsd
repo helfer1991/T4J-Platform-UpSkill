@@ -1,0 +1,85 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrativo" as ADM
+
+participant ":RegistarCompetenciaTecnicaUI" as UI
+participant ":RegistarCompetenciaTecnicaController" as CTRL
+participant "ct\n:CompetenciaTecnica" as COMPETENCIA
+participant "grau\n:GrauProficiencia" as GP
+database RepositorioAreaAtividadeDB as aaDB 
+database RepositorioGrauProficienciaDB as gpDB
+database RepositorioCompetenciaTecnicaDB as ctDB
+
+activate ADM
+ADM -> UI : inicia a especificação de uma competência técnica
+activate UI
+UI --> ADM : solicita os dados \n(código único, descrição breve e detalhada)
+deactivate UI
+
+ADM -> UI : introduz os dados solicitados
+activate UI
+
+UI -> CTRL : la=getAreasAtividade()
+activate CTRL
+
+CTRL -> aaDB : listaAA = getAll()
+activate aaDB 
+deactivate aaDB
+
+UI --> ADM : mostra a lista de áreas de atividade e pede para selecionar uma
+deactivate CTRL
+deactivate UI
+
+ADM -> UI : seleciona uma área de atividade
+activate UI
+UI -> CTRL : aa = getAreaAtividadeById()
+activate CTRL
+CTRL -> aaDB: aa=find(aaId)
+activate aaDB
+deactivate aaDB
+UI -> CTRL : registarCompetenciaTecnica()
+CTRL --> COMPETENCIA**: ct = create(cod,dsBreve,dsDet,at)
+deactivate CTRL
+
+loop
+UI --> ADM : solicita os vários graus de proficiência aplicaveis
+deactivate UI
+
+ADM -> UI : introduz os dados de cada grau
+activate UI
+
+UI -> CTRL :  registarGrauProficiencia(valor, designacao)
+activate CTRL
+
+CTRL -> COMPETENCIA : addGrauProficiencia(valor, designacao, ct)
+activate COMPETENCIA
+COMPETENCIA -> GP** : gp = create(valor,designacao, ct)
+deactivate COMPETENCIA
+CTRL -> gpDB : save(gp)
+activate gpDB
+deactivate gpDB
+deactivate CTRL
+
+end loop
+
+UI --> ADM : apresenta os dados e solicita confirmação
+deactivate CTRL
+deactivate UI
+
+ADM -> UI : confirma os dados
+activate UI
+UI -> CTRL : registarCompetenciaTecnica(ct)
+activate CTRL
+CTRL -> ctDB : save(ct)
+activate ctDB
+deactivate ctDB
+deactivate CTRL
+
+UI --> ADM : informa do sucesso da operação
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+
+@enduml

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.AdicionarAtribuicaoUI">
+   <children>
+      <BorderPane prefHeight="477.0" prefWidth="656.0">
+         <top>
+            <TableView fx:id="tableViewClass" maxHeight="433.0" onMouseClicked="#tableViewCandClass" prefHeight="433.0" prefWidth="656.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="tableViewClassPos" prefWidth="59.0" text="Pos" />
+                  <TableColumn fx:id="tableViewIdCand" prefWidth="96.0" text="Id Candidatura" />
+                <TableColumn fx:id="tableViewClassNifFree" prefWidth="156.0" text="NIF Freelancer" />
+                  <TableColumn fx:id="tableViewClassValor" prefWidth="166.0" text="Valor" />
+                  <TableColumn fx:id="tableViewClassDuracao" prefWidth="178.0" text="Duração" />
+              </columns>
+            </TableView>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="45.0" prefWidth="656.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button defaultButton="true" layoutX="481.0" layoutY="10.0" mnemonicParsing="false" onAction="#actionAtribuir" text="Atribuir Tarefa a Selecionado" />
+                  <Button cancelButton="true" layoutX="412.0" layoutY="10.0" mnemonicParsing="false" onAction="#actionCancel" text="Cancelar" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

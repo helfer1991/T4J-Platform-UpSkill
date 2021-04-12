@@ -1,0 +1,79 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class AdicionarAnuncioUI {
+
+}
+
+class RegistarAnuncioController {
+  +List<String> getAllTipoRegimentoDesignacao()
+  +Colaborador getColabByEmail()
+  +RegistaAnuncio(Date dtInicioPublicitacao, Date dtFimPublicitacao, Date dtInicioCandidatura, Date dtFimCandidatura,
+        Date dtInicioSeriacao, Date dtFimSeriacao, Tarefa tarefa, Colaborador colab, TipoRegimento regimento)
+}
+
+class RepositorioTarefa {  
+  +List<Tarefa> getListaTarefasByOrg(Organizacao org)
+}
+
+class Tarefa {
+  -String ref
+  -String designacao
+  -String descrInformal
+  -String descrTecnica
+  -Integer duracaoEst
+  -Double custoEst
+  -CategoriaTarefa catTarefa
+  -Colaborador colab
+  +Tarefa(String ref, String designacao, String descrInformal, String descrTecnica,
+            Integer duracaoEst, Double custoEst, CategoriaTarefa catTarefa, Colaborador colab)
+  
+}
+
+class RepositorioTipoRegimento {
+  +List<TipoRegimento> getAll()
+}
+
+class TipoRegimento {
+  -String designacao;
+  -String descricaoRegras;
+  -int id;
+}
+
+class RepositorioAnuncio {
+  +save(Anuncio anuncio)
+  +Anuncio find(String referencia)
+  +List<Anuncio> getAll()
+  +List<Anuncio> getAnunciosByOrg(Organizacao org)
+  +List<Anuncio> getAnunciosDisponiveis()
+
+}
+
+class Anuncio {
+  -Date dtInicioPublicitacao
+  -Date dtFimPublicitacao
+  -Date dtInicioCandidatura
+  -Date dtFimCandidatura
+  -Date dtInicioSeriacao
+  -Date dtFimSeriacao
+  -Tarefa tarefa
+  -Colaborador colaborador
+  -TipoRegimento regimento
+  +Anuncio( Date dtInicioPublicitacao, Date dtFimPublicitacao, \nDate dtInicioCandidatura, Date dtFimCandidatura,
+            Date dtInicioSeriacao, Date dtFimSeriacao, Tarefa tarefa, \nColaborador colaborador, TipoRegimento regimento)
+  }
+
+
+AdicionarAnuncioUI ..> RegistarAnuncioController
+RegistarAnuncioController ..> RepositorioTipoRegimento
+RegistarAnuncioController ..> RepositorioTarefa
+RegistarAnuncioController ..> RepositorioAnuncio
+RegistarAnuncioController "1" --> "*" Anuncio : cria
+RepositorioTipoRegimento "1" --> "*" TipoRegimento : possui
+RepositorioTarefa "1" --> "*" Tarefa: possui
+RepositorioAnuncio "1" --> "*" Anuncio : possui
+Anuncio "0..1" --> "1" Tarefa: publicita
+Anuncio "0..1" <-- "1" Tarefa: dá origem
+Anuncio "*" --> "1" TipoRegimento: rege-se por
+
+@enduml

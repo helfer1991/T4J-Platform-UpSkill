@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.TabCandidaturasUI">
+   <center>
+      <AnchorPane prefHeight="551.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableViewCandidatura" onMouseClicked="#tableViewCand" prefHeight="486.0" prefWidth="800.0">
+              <columns>
+                <TableColumn fx:id="tableViewIdAnuncio" prefWidth="180.0" text="Código Anúncio" />
+                <TableColumn fx:id="tableViewDataCand" prefWidth="220.0" text="Data Candidatura" />
+                  <TableColumn fx:id="tableViewValorPretendido" prefWidth="150.0" text="Valor (POTS)" />
+                  <TableColumn fx:id="tableViewNrDias" prefWidth="250.0" text="Tempo Execução" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnAlterarCandidatura" layoutX="496.0" layoutY="505.0" mnemonicParsing="false" onAction="#actionAlterarCandidatura" text="Alterar Candidatura" />
+            <Button fx:id="btnRemoverCandidatura" layoutX="644.0" layoutY="505.0" mnemonicParsing="false" onAction="#actionRemoverCandidatura" text="Remover Candidatura" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

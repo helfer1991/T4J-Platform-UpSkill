@@ -1,0 +1,27 @@
+@startuml
+
+@startuml
+autonumber
+actor "Gestor de Organização" as GES
+
+participant ":Sistema" as SIST
+
+activate GES
+GES -> SIST : inicia o processo de registo de Colaborador da Organização
+activate SIST
+SIST --> GES : solicita os dados necessários (Nome, Contacto, Email)
+deactivate SIST
+
+GES -> SIST : insere os dados
+activate SIST
+SIST --> GES : valida os dados e solicita confirmação
+deactivate SIST
+
+GES -> SIST : confirma os dados
+activate SIST
+SIST --> GES : apresenta mensagem de sucesso
+deactivate SIST
+
+deactivate GES
+
+@enduml

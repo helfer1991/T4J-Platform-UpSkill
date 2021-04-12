@@ -1,0 +1,23 @@
+@startuml
+autonumber
+actor "Sistema" as SISAC
+
+participant ":Sistema" as SIST
+
+activate SISAC
+
+    SISAC -> SIST : adjudica automaticamente a tarefa após a conclusão do processo de seriação
+    activate SIST
+    deactivate SIST
+
+    SISAC -> SIST : reúne os dados necessários (i.e. a organização que adjudica a tarefa, \no freelancer a quem é adjudicada a realização da tarefa, a descrição da tarefa adjudicada, \no período afeto, o valor remuneratório, uma referência ao anuncio), gera um número único sequencial anual \ne adjudica o anúncio automaticamente.
+    activate SIST
+    deactivate SIST
+
+    SISAC -> SIST : quando termina regista os dados juntamente com a data/hora atual
+    activate SIST
+    deactivate SIST
+
+deactivate SISAC
+
+@enduml

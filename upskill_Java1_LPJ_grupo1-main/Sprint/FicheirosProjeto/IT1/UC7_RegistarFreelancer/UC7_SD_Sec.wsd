@@ -1,0 +1,41 @@
+@startuml
+autonumber
+title UC7_SD_RegistarFreelancerComoUtilizador
+participant "rfr: RegistoFreelancer" as RF
+participant ":Plataforma" as PLAT
+
+participant "fr: Freelancer" as FR
+participant "<<interface>>\n alg: AlgoritmoGeradorPwd" as PASS
+participant "af: AutorizacaoFacade" as AF
+
+RF -> RF: RegistaFreelancerComoUtilizador()
+
+activate RF
+RF -> FR: nome = getNome()
+activate FR
+deactivate FR
+
+RF -> FR: email = getEmail()
+activate FR
+deactivate FR
+
+RF -> PLAT: alg=getAlgoritmoGeradorPwd()
+activate PLAT
+deactivate PLAT
+
+RF -> PASS: pwd=geraPassword(nome, email)
+activate PASS
+deactivate PASS
+
+RF -> PLAT: af=getAutorizacaoFacade()
+activate PLAT
+deactivate PLAT
+
+RF -> AF : registaUtilizadorComPapeis(nome, email, pwd, ['Freelancer'])
+deactivate AF
+
+
+RF -> RF : enviaEmail(nome, email, pwd)
+
+
+@enduml

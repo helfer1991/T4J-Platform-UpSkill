@@ -1,0 +1,50 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class AdicionarTarefaUI {
+}
+
+class RegistarTarefaController {
+  +ArrayList<String> getListaCatTarefaIdDesc()
+  +novaTarefa(String ref, String designacao, String descrInformal,
+            String descrTecnica, Integer duracaoEst, Double custoEst, CategoriaTarefa catTarefa, Colaborador colab)
+}
+
+class RepositorioCategoriaTarefa {
+  +List<CategoriaTarefa> getAllCatTarefa()
+  }
+
+class RepositorioTarefa {
+  +save(Tarefa tarefa)
+  +Tarefa find(String id)
+  +List<Tarefa> getAll()
+  +List<Tarefa> getListaTarefasByOrg(Organizacao org)
+}
+
+class RepositorioColaborador {
+  +Colaborador getColaboradorByEmail(email)
+}
+
+  class Tarefa {
+  -String ref
+  -String designacao
+  -String descrInformal
+  -String descrTecnica
+  -Integer duracaoEst
+  -Double custoEst
+  -CategoriaTarefa catTarefa
+  -Colaborador colab
+  +Tarefa(String ref, String designacao, String descrInformal, String descrTecnica,
+            Integer duracaoEst, Double custoEst, CategoriaTarefa catTarefa, Colaborador colab)
+  
+  }
+
+
+AdicionarTarefaUI ..> RegistarTarefaController
+RegistarTarefaController ..> RepositorioTarefa
+RegistarTarefaController ..> RepositorioCategoriaTarefa
+RegistarTarefaController ..> RepositorioColaborador
+RegistarTarefaController "1" --> "*" Tarefa : cria
+RepositorioTarefa "1" --> "*" Tarefa : possui
+
+@enduml

@@ -1,0 +1,62 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class AdicionarCategoriaTarefaUI {
+}
+
+class RegistarCategoriaTarefaController {
+  +ArrayList<String> getListaAreaAtividadeDescBreve()
+  +List<String> getListaCompetenciasTecnicasByIdAreaAtividade()
+  +List<AreaAtividade> getListaAreasAtividade()
+  +List<CompetenciaTecnica> getListaCompetenciasTecnicas()
+  +List<CategoriaTarefa> getListaCatTarefa()
+  +CompetenciaTecnica getCompetenciaTecnicaByDescBreve(String descBreve)
+  +boolean registaCategoriaTarefa(String descricao, AreaAtividade oArea, List<CaraterCT> lcompTec)
+  +addCompTecnicaToList(CompetenciaTecnica ct, int obrigatoriedade, String grauProficiencia)
+  +AreaAtividade getAreaAtividade(String id)
+}
+
+class RepositorioAreaAtividade {
+  +List<AreaAtividade> getAll()
+}
+
+class RepositorioCompetenciaTecnica {
+  +List<CompetenciaTecnica> getListaCompetenciaTecnicaByAreaAtividade(String id)
+}
+
+class RepositorioCategoriaTarefa {
+  +save(CategoriaTarefa ct)
+  +List<CategoriaTarefa> getAll()
+  +List<CaraterCT> getCaraterCTByCatTarID(String id)
+  +CategoriaTarefa find(String id)
+}
+
+class CategoriaTarefa {
+  -String idCategoria
+  -String descricao
+  -AreaAtividade areaAtividade
+  -List<CaraterCT> lcompTec
+  -setDescricao(String descricao)
+  -setAreaAtividade(AreaAtividade areaAtividade)
+  -setLcompTec(List<CaraterCT> lcomptec)
+  +CategoriaTarefa(String descricao, AreaAtividade oArea, List<CaraterCT> listCompTec)
+  +String getId()
+  +setIdCategoria(String idCategoria)
+  +String getDescricao()
+  +AreaAtividade getAreaAtividade()
+  +List<CaraterCT> getLcompTec()
+  }
+
+  class CompetenciaTecnica {
+    +ArrayList<String> getListaGrausProficienciaString()
+  }
+
+
+AdicionarCategoriaTarefaUI ..> RegistarCategoriaTarefaController
+RegistarCategoriaTarefaController ..> RepositorioAreaAtividade
+RegistarCategoriaTarefaController ..> RepositorioCompetenciaTecnica
+RepositorioCompetenciaTecnica "1" --> "*" CompetenciaTecnica : possui
+RegistarCategoriaTarefaController ..> RepositorioCategoriaTarefa
+RepositorioCategoriaTarefa "1" --> "*" CategoriaTarefa : possui
+
+@enduml

@@ -1,0 +1,86 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class AdicionarAtribuicaoUI {
+
+}
+
+class RegistarSeriacaoController {
+  +List<tribuicao> getListAtribuicoes()
+  +List<Classificacao> getListaClassificacoesSelectedAnuncio(ProcessoSeriacao ps)
+  +Colaborador getColabByEmail()
+  +addAtribuicao(Classificacao classificacao)
+}
+
+class Tarefa {
+  -String ref
+  -String designacao
+  -String descrInformal
+  -String descrTecnica
+  -Integer duracaoEst
+  -Double custoEst
+  -CategoriaTarefa catTarefa
+  -Colaborador colab
+  +Tarefa(String ref, String designacao, String descrInformal, String descrTecnica,
+            Integer duracaoEst, Double custoEst, CategoriaTarefa catTarefa, Colaborador colab)
+  
+}
+
+class RepositorioAtribuicaoDB {
+  +save(atribuicao)
+}
+
+class RepositorioOrganizacaoDB {
+  +getOrgByColabEmail(email)
+}
+
+class Plataforma {
+  +getUsersAPI()
+}
+
+class UsersAPI {
+  +getEmail()
+}
+
+class TipoRegimento {
+  -String designacao;
+  -String descricaoRegras;
+  -int id;
+}
+
+class Atribuicao {
+    -Date dataInicio
+    -Date dataFim
+    -Integer valor
+    -Integer numSequencial
+    +Atribuicao(classificacao)
+}
+
+class Anuncio {
+  -Date dtInicioPublicitacao
+  -Date dtFimPublicitacao
+  -Date dtInicioCandidatura
+  -Date dtFimCandidatura
+  -Date dtInicioSeriacao
+  -Date dtFimSeriacao
+  -Tarefa tarefa
+  -Colaborador colaborador
+  -TipoRegimento regimento
+  +Anuncio( Date dtInicioPublicitacao, Date dtFimPublicitacao, \nDate dtInicioCandidatura, Date dtFimCandidatura,
+            Date dtInicioSeriacao, Date dtFimSeriacao, Tarefa tarefa, \nColaborador colaborador, TipoRegimento regimento)
+  }
+
+
+AdicionarAtribuicaoUI ..> RegistarSeriacaoController
+RegistarSeriacaoController ..> RepositorioAtribuicaoDB
+RegistarSeriacaoController ..> RepositorioOrganizacaoDB
+RegistarSeriacaoController ..> RepositorioSeriacaoDB
+RegistarSeriacaoController ..> Plataforma
+Plataforma ..> UsersAPI
+Plataforma "1" --> "*" Tarefa
+Plataforma "1" --> "*" Anuncio
+Anuncio "0..1" <-- "1" Tarefa: dá origem
+Anuncio "*" --> "1" TipoRegimento: rege-se por
+Tarefa "1" --> "1" Atribuicao: originada por
+
+@enduml

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.AdicionarColaboradoresSeriacaoUI">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane layoutX="23.0" layoutY="14.0" prefHeight="495.0" prefWidth="620.0">
+               <center>
+                  <AnchorPane prefHeight="489.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane layoutX="7.0" layoutY="-1.0" prefHeight="451.0" prefWidth="608.0">
+                           <children>
+                              <GridPane prefHeight="432.0" prefWidth="170.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Button layoutX="4.0" layoutY="147.0" mnemonicParsing="false" onAction="#actionAddColab" prefHeight="25.0" prefWidth="197.0" text="Adicionar a Lista de Participantes" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Button layoutX="17.0" layoutY="37.0" mnemonicParsing="false" onAction="#actionRemoverColab" prefHeight="25.0" prefWidth="170.0" text="Remover" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <ListView fx:id="listViewColab" prefHeight="450.0" prefWidth="195.0" />
+                              <ListView fx:id="listViewColabSelected" prefHeight="450.0" prefWidth="207.0" GridPane.columnIndex="2" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <top>
+                  <GridPane prefHeight="44.0" prefWidth="541.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="199.0" text="Colaboradores da Organização" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label layoutX="129.0" layoutY="14.0" text="Colaboradores Selecionados" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <FlowPane alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="665.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#actionCancel" text="Cancelar">
+               <FlowPane.margin>
+                  <Insets right="10.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnAddPSeriacao" alignment="CENTER_RIGHT" defaultButton="true" mnemonicParsing="false" onAction="#actionAddPSeriacao" text="Finalizar Processo Seriação">
+               <FlowPane.margin>
+                  <Insets right="10.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+   </bottom>
+</BorderPane>

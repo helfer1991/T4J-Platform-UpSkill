@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.AdicionarTarefaUI">
+   <padding>
+      <Insets right="5.0" />
+   </padding>
+   <left>
+      <StackPane prefHeight="500.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="500.0" prefWidth="450.0">
+               <children>
+                  <Label layoutX="159.0" layoutY="13.0" text="Adicionar Tarefa">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbNovaTarefaCatTarefa" layoutX="125.0" layoutY="73.0" prefHeight="30.0" prefWidth="200.0" promptText="Categoria de Tarefa" />
+                  <TextField fx:id="txtNovaTarefaRef" layoutX="125.0" layoutY="113.0" onKeyPressed="#txtNovaTarefaRefMaxSize" prefHeight="30.0" prefWidth="200.0" promptText="Referência">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNovaTarefaDesign" layoutX="125.0" layoutY="153.0" onKeyPressed="#txtNovaTarefaDesignacaoMaxSize" prefHeight="30.0" prefWidth="200.0" promptText="Designação">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextArea fx:id="txtNovaTarefaDescInformal" layoutX="125.0" layoutY="193.0" onKeyPressed="#txtNovaTarefaDescInfMaxSize" prefHeight="75.0" prefWidth="200.0" promptText="Descrição Informal">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="txtNovaTarefaDescTecnica" layoutX="125.0" layoutY="278.0" onKeyPressed="#txtNovaTarefaDescTecMaxSize" prefHeight="75.0" prefWidth="200.0" promptText="Descrição Técnica">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <TextField fx:id="txtNovaTarefaDuracao" layoutX="125.0" layoutY="363.0" onKeyPressed="#txtNovaTarefaDuracaoInfMaxSize" prefHeight="30.0" prefWidth="200.0" promptText="Duração (nº Dias)">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNovaTarefaCusto" layoutX="125.0" layoutY="403.0" onKeyReleased="#txtNovaTarefaCustoMaxSize" prefHeight="30.0" prefWidth="200.0" promptText="Custo (POTS)">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button defaultButton="true" layoutX="125.0" layoutY="465.0" mnemonicParsing="false" onAction="#actionAddNovaTarefa" prefHeight="30.0" prefWidth="200.0" text="Adicionar Nova Tarefa">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="8.0" layoutY="465.0" mnemonicParsing="false" onAction="#actionCancel" prefHeight="30.0" text="Cancelar">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </left>
+</BorderPane>

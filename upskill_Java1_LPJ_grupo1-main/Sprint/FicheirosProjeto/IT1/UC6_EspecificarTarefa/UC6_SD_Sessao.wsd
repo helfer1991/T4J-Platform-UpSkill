@@ -1,0 +1,23 @@
+@startuml
+title Sessao email
+
+participant "s: Sessao" as Sessao #DeepSkyBlue
+participant "sessao: UsersAPIAdapter" as SU #DeepSkyBlue
+participant "UsersAPI" as GU #DeepSkyBlue
+
+
+[o-> Sessao : org = getOrganizacaoByEmailUtilizador() 
+activate Sessao
+
+Sessao -> SU : sessao = getSession()
+activate SU
+deactivate SU
+
+Sessao -> GU : email = getEmail()
+activate GU
+deactivate GU
+
+
+deactivate Sessao
+
+@enduml

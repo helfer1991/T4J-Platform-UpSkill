@@ -1,0 +1,38 @@
+@startuml
+autonumber
+actor "Administrativo" as UNR
+
+activate UNR
+UNR -> ":Sistema" : registar freelancer
+activate ":Sistema"
+":Sistema" --> UNR : solicita dados do freelancer (o nome, o NIF, o endereço postal, um contacto telefónico e email)
+deactivate ":Sistema"
+UNR -> ":Sistema" : introduz os dados solicitados
+
+loop
+activate ":Sistema"
+":Sistema" --> UNR : solicita habilitações académicas (grau, designação do curso, instituição que concedeu o grau e média do curso)
+deactivate ":Sistema"
+UNR -> ":Sistema" : introduz os dados solicitados
+activate ":Sistema"
+end loop 
+
+loop
+
+":Sistema" --> UNR : solicita reconhecimentos de competências técnicas (data, competência técnica e grau de proficiência)
+deactivate ":Sistema"
+UNR -> ":Sistema" : introduz os dados solicitados
+activate ":Sistema"
+end loop
+
+
+":Sistema" --> UNR : apresenta dados e solicita confirmação
+deactivate ":Sistema"
+
+UNR -> ":Sistema" : confirma
+activate ":Sistema"
+":Sistema" --> UNR : operação bem sucedida
+deactivate ":Sistema"
+
+deactivate UNR
+@enduml

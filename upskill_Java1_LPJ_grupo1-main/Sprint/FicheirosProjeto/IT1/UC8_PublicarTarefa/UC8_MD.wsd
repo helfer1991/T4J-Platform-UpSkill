@@ -1,0 +1,62 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+class Plataforma {
+}
+
+class Colaborador {
+  -String nome
+  -String funcao
+  -String telefone
+  -String email
+}
+
+class Tarefa {
+  -String referencia
+  -String designacao
+  -String descInformal
+  -String descTecnica
+  -Integer duracaoEst
+  -Double custoEst
+}
+
+class TipoRegimento
+{
+    -String designacao
+    -String descricaoRegras
+}
+
+class Anuncio
+{
+    -Date dtInicioPublicitacao
+    -Date dtFimPublicitacao
+    -Date dtInicioCandidatura
+    -Date dtFimCandidatura
+    -Date dtInicioSeriacao
+    -Date dtFimSeriacao
+}
+
+class Organizacao {
+  -String nome
+  -String NIF
+  -String website
+  -String telefone
+  -String email
+}
+
+Plataforma "1" -- "*" Anuncio : publicita >
+Plataforma "1" -- "*" TipoRegimento : suporta >
+Plataforma "1" -- "*" Organizacao : tem registadas >
+
+Organizacao "1" -- "*" Tarefa: possui >
+
+Tarefa "*" -- "1" Colaborador: especificada por >
+
+Anuncio "0..1" -- "1" Tarefa: publicita >
+Anuncio "0..1" -- "1" Tarefa: dá origem <
+Anuncio "*" -- "1" TipoRegimento: rege-se por >
+Anuncio "*" -- "1" Colaborador: publicado por >
+
+@enduml

@@ -1,0 +1,73 @@
+@startuml
+skinparam classAttributeIconSize 0
+left to right direction
+
+class AlterarCandidaturaUI {
+}
+
+class RegistarCandidaturaController {
+  +Freelancer getFreelancerByEmail()
+  +Candidatura getCandidaturasDispByFreelancerEmail()
+  +Candidatura getCandById()
+  +void alterarCandidatura(valor,nrDias,txtApr,txtMotiv)
+  +List<Candidatura> getAllCandDispByFreelancerEmail(email)
+}
+
+class Plataforma {
+    +getUsersAPI()
+}
+
+class Freelancer {
+    -String nome
+    -String NIF
+    -String telefone
+    -String email
+}
+
+class Anuncio {
+    -Date dtInicioPublicitacao
+    -Date dtFimPublicitacao
+    -Date dtInicioCandidatura
+    -Date dtFimCandidatura
+    -Date dtInicioSeriacao
+    -Date dtFimSeriacao
+}
+
+class Candidatura {
+    -Date dataCandidatura
+    -Double valorPretendido
+    -Integer nrDias
+    -String txtApresentacao
+    -String txtMotivacao
+}
+
+class UsersAPI {
+  +getEmail()
+}
+
+class RepositorioFreelancerDB {
+  +find(String email)
+}
+
+class RepositorioCandidaturaDB {
+  +getAllCandDispByFreelancerEmail(String email)
+  +find(int id)
+  +update(Candidatura cand)
+}
+
+AlterarCandidaturaUI ..> RegistarCandidaturaController
+RegistarCandidaturaController ..> Plataforma
+RegistarCandidaturaController ..> Freelancer
+RegistarCandidaturaController ..> Anuncio
+RegistarCandidaturaController ..>RepositorioFreelancerDB
+RegistarCandidaturaController ..>RepositorioCandidaturaDB
+Plataforma ..> UsersAPI
+
+Plataforma "1" --> "*" Anuncio : agrega
+Plataforma "1" --> "1..*" Freelancer : possui
+Anuncio "1" --> "*" Candidatura : agrega
+
+Candidatura "*" --> "1"  Freelancer: realizada por >
+
+
+@enduml

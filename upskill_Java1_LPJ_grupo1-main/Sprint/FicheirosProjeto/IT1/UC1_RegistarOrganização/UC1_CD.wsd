@@ -1,0 +1,67 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Colaborador {
+  -String nome
+  -String telefone
+  -String email
+  +Colaborador(nome,tlf, email)
+}
+
+class EnderecoPostal {
+  -String local
+  -String codPostal
+  -String localidade
+  +EnderecoPostal(local,codPostal,localidade)
+}
+
+class Organizacao {
+  -String nome
+  -String NIF
+  -String website
+  -String telefone
+  -String email
+  +Organizacao(nome, NIF,webSite,telefone, email,endereco,gestorColaborador)
+  +{static} EnderecoPostal registarEndereco(morada,codPostal,localidade)
+  +{static} Colaborador registarColaborador(nome,funcao,tlf, email)
+}
+
+class Plataforma {
+  +getUsersAPI()
+  +AlgoritmoGeradorPasswords getAlgoritmoGeradorPwd()
+}
+
+class UserAPI {
+   +registerUserWithRoles(nome, telefone, email, funcao, password)
+}
+
+interface AlgoritmoGeradorPasswords <<interface>>{
+   +String geraPassword(String nomeG, String emailG)
+}
+
+class RegistarOrganizacaoController {
+    +void registarOrganizacao(nome,NIF,endLocal,endCodPostal,endLocalidade,tlf,site,email,nomeG,função,tlfG, emailG,pwd)
+    +void registarEndercoPostal(morada,codPostal,localidade)
+    +void registarColaborador(nome,funcao,tlf, email
+}
+
+class RegistarOrganizacaoUI {
+}
+
+class RepositorioOrganizacaoDB {
+  +save(Organizacao org)
+}
+
+RegistarOrganizacaoUI ..> RegistarOrganizacaoController
+RegistarOrganizacaoController ..> Plataforma
+RegistarOrganizacaoController ..> Organizacao
+RegistarOrganizacaoController ..> RepositorioOrganizacaoDB
+
+Plataforma "1" --> "*" Organizacao : tem registadas
+Plataforma ..> UserAPI
+Plataforma ..> AlgoritmoGeradorPasswords
+Organizacao "1" --> "1..*" Colaborador: tem
+Organizacao "1" --> "1" Colaborador: gerida por/tem gestor
+Organizacao "1" --> "1" EnderecoPostal: localizada em
+
+@enduml

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.RegistarOrgUI">
+   <padding>
+      <Insets right="5.0" />
+   </padding>
+   <top>
+      <StackPane prefHeight="500.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="500.0" prefWidth="450.0">
+               <children>
+                  <TextField fx:id="txtSignUpOrgName" layoutX="12.0" layoutY="112.0" onKeyPressed="#txtSignUpOrgNameMaxSizeisLetter" prefHeight="30.0" prefWidth="200.0" promptText="Nome da Organização">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSignUpOrgNIF" layoutX="12.0" layoutY="152.0" onKeyPressed="#txtSignUpOrgNIFMaxSizeisDigit" prefHeight="30.0" prefWidth="200.0" promptText="NIF">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSignUpOrgPhone" layoutX="12.0" layoutY="192.0" onKeyPressed="#txtSignUpOrgPhoneMaxSizeisDigit" prefHeight="30.0" prefWidth="200.0" promptText="Telefone">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSignUpAdress" layoutX="12.0" layoutY="232.0" onKeyPressed="#txtSignUpAdressMaxSize" prefHeight="30.0" prefWidth="200.0" promptText="Morada">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSignUpOrgZipCode" layoutX="12.0" layoutY="272.0" onKeyPressed="#txtSignUpOrgZipCodeMaxSize" prefHeight="30.0" prefWidth="200.0" promptText="Código Postal">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSignUpOrgLocale" layoutX="12.0" layoutY="312.0" onKeyPressed="#txtSignUpOrgLocaleMaxSizeisLetter" prefHeight="30.0" prefWidth="200.0" promptText="Localidade">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSignUpOrgWebSite" layoutX="12.0" layoutY="352.0" onKeyPressed="#txtSignUpOrgWebSiteMaxSize" prefHeight="30.0" prefWidth="200.0" promptText="Website">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSignUpOrgEmail" layoutX="12.0" layoutY="392.0" onKeyPressed="#txtSignUpOrgEmailMaxSize" prefHeight="30.0" prefWidth="200.0" promptText="Email">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSignUpManagerName" layoutX="234.0" layoutY="112.0" onKeyPressed="#txtSignUpManagerNameMaxSizeisLetter" prefHeight="30.0" prefWidth="200.0" promptText="Nome do Gestor">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSignUpManagerPhone" layoutX="234.0" layoutY="152.0" onKeyPressed="#txtSignUpManagerPhoneMaxSizeisDigit" prefHeight="30.0" prefWidth="200.0" promptText="Telefone do Gestor">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSignUpManagerEmail" layoutX="234.0" layoutY="192.0" maxWidth="250.0" onKeyPressed="#txtSignUpManagerEmailMaxSize" prefHeight="30.0" prefWidth="200.0" promptText="Email do Gestor">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnRegistarOrg" defaultButton="true" layoutX="125.0" layoutY="465.0" mnemonicParsing="false" onAction="#btnRegistarOrgAction" prefHeight="30.0" prefWidth="200.0" text="Registar">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCancel" layoutX="8.0" layoutY="465.0" mnemonicParsing="false" onAction="#btnCancelAction" prefHeight="30.0" text="Cancelar">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="138.0" layoutY="13.0" text="Registar Organização">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </top>
+</BorderPane>

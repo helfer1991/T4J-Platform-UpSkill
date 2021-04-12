@@ -1,0 +1,64 @@
+@startuml
+autonumber
+
+actor "Gestor da Organização" as GES
+participant ":AdicionarAtribuicaoUI" as UI
+participant ":RegistarSeriacaoController" as CTRL
+participant ":Plataforma" as PLAT
+participant ": UsersAPI" as UAPI
+participant "atrib:Atribuicao" as ATRIB
+database RepositorioOrganizacaoDB as  orgDB
+database RepositorioSeriacaoDB as seriacDB
+database RepositorioAtribuicaoDB as atribDB
+
+activate GES
+GES -> UI : inicia o processo de atribuição de uma tarefa
+activate UI
+
+UI -> CTRL : getOrgByColabEmail()
+activate CTRL
+CTRL -> PLAT : email = getUsersAPI()
+activate PLAT
+PLAT -> UAPI : email = getEmail()
+activate UAPI
+deactivate PLAT
+deactivate UAPI
+CTRL -> orgDB : org = getOrgByColabEmail(email)
+activate orgDB
+deactivate orgDB
+deactivate CTRL 
+
+UI -> CTRL : lClass = getClassificacaoByProcSeriacao()
+activate CTRL
+CTRL -> seriacDB : getClassific()
+activate seriacDB
+deactivate seriacDB
+deactivate CTRL
+
+UI --> GES : pede para selecionar anuncio da lista de anuncios com tarefa por atribuir
+deactivate UI
+
+GES -> UI : escolhe
+activate UI
+UI --> GES : pede os dados (i.e. a organização que adjudica a tarefa, \no freelancer a quem é adjudicada a realização da tarefa, \na descrição da tarefa adjudicada, o período afeto, o valor remuneratório, \numa referência ao anuncio)
+deactivate UI
+
+GES -> UI : introduz os dados solicitados 
+activate UI
+
+UI --> GES : mostra os dados e pede a confirmação
+deactivate UI
+
+GES -> UI : confirma dados 
+activate UI
+UI -> CTRL : addAtribuicao(classificacao)
+activate CTRL
+CTRL --> ATRIB**: atribuicao = create(classificacao)
+CTRL -> atribDB : save(atribuicao)
+activate atribDB
+deactivate atribDB
+UI --> GES: informa do sucesso da operação
+deactivate CTRL
+deactivate UI
+
+@enduml

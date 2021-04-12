@@ -1,0 +1,66 @@
+@startuml
+autonumber
+
+actor "Gestor de Organização" as GEST
+participant ":RegistarColaboradorUI" as UI
+participant ":RegistarColaboradorController" as CTRL
+participant ":Plataforma" as PLAT
+participant "uAPI:\nUsersAPI" as UApi
+participant "agp:\nAlgoritmoGeradorPasswords" as AGP
+participant "c:\nColaborador" as COLAB
+database RepositorioOrganizacaoDB as orgDB
+database RepositorioColaboradorDB as colabDB
+
+activate GEST
+GEST -> UI : começa o processo de registo de um colaborador
+activate UI
+
+UI --> GEST : solicita os dados requeridos sobre o mesmo\n (nome, funcao, contacto, email)
+deactivate UI
+
+GEST -> UI : insere os dados do novo colaborador
+activate UI
+UI -> CTRL : getOrgByColabEmail()
+activate CTRL
+CTRL -> PLAT : email = getUsersAPI()
+activate PLAT
+PLAT -> UApi : email = getEmail()
+activate UApi
+deactivate PLAT
+deactivate UApi
+CTRL -> orgDB : org = getOrgByColabEmail(email)
+activate orgDB
+deactivate orgDB
+deactivate CTRL 
+
+UI --> GEST : valida os dados introduzidos, apresenta-os e solicita a confirmação
+deactivate UI
+
+
+deactivate PLAT
+deactivate UI
+deactivate CTRL
+GEST -> UI : confirma
+activate UI
+UI -> CTRL: registaColaborador()
+activate CTRL
+
+
+CTRL -> AGP : password = geraPassword()
+activate AGP
+deactivate AGP
+CTRL --> PLAT : RegisterUserWithRoles(nome,email,password,funcao)
+activate PLAT
+PLAT -> UApi : RegisterUserWithRoles(nome,email,password,funcao)
+activate UApi
+deactivate UApi
+deactivate PLAT
+CTRL --> COLAB **: colab = create(nome,contacto,email)
+CTRL -> colabDB : save(colab)
+activate colabDB
+deactivate colabDB
+deactivate CTRL
+UI --> GEST: regista os dados do colaborador, gera-lhe uma password \n(enviando, por email, os dados de acesso ao colaborador) \ne informa o gestor de organização do sucesso da operação
+deactivate UI
+
+@enduml

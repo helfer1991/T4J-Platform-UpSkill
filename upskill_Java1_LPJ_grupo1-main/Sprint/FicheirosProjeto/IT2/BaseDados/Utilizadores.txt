@@ -1,0 +1,25 @@
+Utilizadores
+
+Admin: 
+user : test_admin1
+pw : test_admin1
+
+Freelancer:
+user : FreelancerFinalsB
+pw : pS6h965ZbQ
+
+Freelancer:
+user : FreelancerFinalsC
+pw : a0w4XXhR40
+
+FreelancerFinalsD
+FreelancerFinalsD@gmail.com
+8fr5sSMeBI
+
+
+OrganizacaoFinalsGestor
+j1wKYmtPFt
+
+OrganizacaoFinalsColaborador
+orgFinColab@empresa.pt
+6eShF0Rv2p

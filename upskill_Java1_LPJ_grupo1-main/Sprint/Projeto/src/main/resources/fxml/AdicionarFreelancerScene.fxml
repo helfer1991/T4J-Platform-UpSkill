@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.AdicionarFreelancerUI">
+   <children>
+      <StackPane prefHeight="500.0" prefWidth="450.0">
+         <children>
+            <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0">
+               <children>
+                  <Label layoutX="146.0" layoutY="13.0" text="Registar Freelancer">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtName" layoutX="125.0" layoutY="97.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#txtNomeMaxSizeIsLetter" prefHeight="30.0" prefWidth="200.0" promptText="Nome">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNif" layoutX="125.0" layoutY="137.0" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#txtNomeMaxSizeIsLetter" prefHeight="30.0" prefWidth="200.0" promptText="NIF">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtMorada" layoutX="125.0" layoutY="177.0" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#txtNomeMaxSizeIsLetter" prefHeight="30.0" prefWidth="200.0" promptText="Morada">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCodPostal" layoutX="125.0" layoutY="217.0" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#txtNomeMaxSizeIsLetter" prefHeight="30.0" prefWidth="200.0" promptText="Código Postal">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtLocalidade" layoutX="125.0" layoutY="257.0" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#txtNomeMaxSizeIsLetter" prefHeight="30.0" prefWidth="200.0" promptText="Localidade">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtPhone" layoutX="125.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#txtPhoneMaxSizeisDigit" prefHeight="30.0" prefWidth="200.0" promptText="Telefone">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtEmail" layoutX="125.0" layoutY="337.0" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#txtEmailMaxSize" prefHeight="30.0" prefWidth="200.0" promptText="Email">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button cancelButton="true" layoutX="8.0" layoutY="465.0" mnemonicParsing="false" onAction="#actionCancel" prefHeight="30.0" text="Cancelar">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="110.0" layoutY="411.0" mnemonicParsing="false" onAction="#actionAddHabilitaçõesLiterarias" prefHeight="30.0" prefWidth="230.0" text="Adicionar Habilitações Literarias">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

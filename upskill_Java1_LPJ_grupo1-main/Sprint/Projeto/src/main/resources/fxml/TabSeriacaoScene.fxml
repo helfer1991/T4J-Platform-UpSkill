@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.TabSeriacaoUI">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0">
+         <center>
+            <AnchorPane minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableViewAnunciosSeriac" onMouseClicked="#clickedAnuncio" prefHeight="486.0" prefWidth="465.0">
+                     <columns>
+                        <TableColumn fx:id="tableViewAnunciosSeriacData" prefWidth="160.0" text="Data de Realização" />
+                        <TableColumn fx:id="tableViewAnunciosSeriacNifColab" prefWidth="190.0" text="Colaborador" />
+                        <TableColumn fx:id="tableViewAnunciosSeriacidAnuncio" prefWidth="115.0" text="idAnúncio" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="593.0" layoutY="5.0" text="Classificação">
+                     <font>
+                        <Font name="Helvetica Light" size="13.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableViewClassific" layoutX="465.0" layoutY="26.0" prefHeight="460.0" prefWidth="335.0">
+                    <columns>
+                        <TableColumn fx:id="tableViewClassificPos" maxWidth="800.0" text="Pos" />
+                        <TableColumn fx:id="tableViewClassificidCand" maxWidth="800.0" prefWidth="100.0" text="idCandidatura" />
+                        <TableColumn fx:id="tableViewClassifNifFreelancer" maxWidth="800.0" prefWidth="155.0" text="Candidato" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btnAddAtribuicao" defaultButton="true" layoutX="671.0" layoutY="505.0" mnemonicParsing="false" onAction="#actionAddAtribuicao" text="Realizar Atribuição" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

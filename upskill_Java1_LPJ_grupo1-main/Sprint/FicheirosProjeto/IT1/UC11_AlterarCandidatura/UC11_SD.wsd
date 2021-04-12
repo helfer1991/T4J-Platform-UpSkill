@@ -1,0 +1,67 @@
+@startuml
+autonumber
+
+actor "Freelancer" as FRL
+participant ":AlterarCandidaturaUI" as UI
+participant ":RegistarCandidaturaController" as CTRL
+participant ":Plataforma" as PLAT
+participant ":UsersAPI" as API
+participant "cand:\nCandidatura" as CAND
+database RepositorioFreelancer as freeDB
+database RepositorioCandidatura as candDB
+
+activate FRL
+FRL -> UI : inicia alterar candidatura
+activate UI
+UI -> CTRL : getFreelancerByEmail()
+activate CTRL
+CTRL -> PLAT : email = getSessionEmail
+activate PLAT
+PLAT -> API : email = getEmail()
+activate API
+deactivate API
+deactivate PLAT
+CTRL -> freeDB : free = find(email)
+activate freeDB
+deactivate freeDB
+deactivate CTRL
+
+
+UI -> CTRL : lcand = getCandidaturasDispByFreelancerEmail()
+activate CTRL
+CTRL -> candDB : lcand = getAllCandidaturasByFreelancerEmail(email)
+activate candDB
+deactivate candDB
+deactivate CTRL
+
+
+UI --> FRL : solicita a escolha de uma das candidaturas por \nsi efetuadas e, ainda, em período de candidaturas
+deactivate UI
+FRL -> UI : escolhe a candidatura
+activate UI
+UI -> CTRL : cand = getCandById()
+activate CTRL
+CTRL -> candDB : cand = find(id)
+activate candDB
+deactivate candDB
+deactivate CTRL
+UI --> FRL : solicita a introdução de novos dados \n(i.e. os que pretende alterar, mantendo os restantes iguais)
+deactivate UI
+
+FRL -> UI : introduz os dados solicitados \n(valor,nrDias,txtApresentacao,txtMotivacao)
+activate UI
+UI -> CTRL : alterarCandidatura(valor,nrDias,txtApresentacao,txtMotivacao)
+activate CTRL
+CTRL -> candDB : update(cand)
+activate candDB
+deactivate candDB
+
+
+UI --> FRL : valida e apresenta os dados ao Freelancer e pede a sua confirmação
+deactivate UI
+
+deactivate CTRL
+deactivate UI
+deactivate FRL
+
+@enduml

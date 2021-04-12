@@ -1,0 +1,107 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrativo" as ADM
+
+participant "AdicionarCategoriaTarefaUI" as UI
+participant "RegistarCategoriaTarefaController" as CTRL
+participant "RepositorioAreaAtividade" as RAT
+participant "RepositorioCompetenciaTecnica" as RCT
+participant "cat\n:Categoria" as CAT
+participant "RepositorioCategoriaTarefa" as RCAT
+participant "ct:\nCompetenciaTecnica" as CT
+participant "lcompTec:List<CaraterCT>" as LISTACT
+database AreaAtividadeDB as aaDB 
+database CompetenciaTecnica as ctDB
+database CategoriaTarefaDB as ctarefaDB
+
+
+activate ADM
+
+ADM -> UI : inicia a definição de nova categoria de tarefa
+activate UI
+
+UI -> CTRL : la=getListaAreaAtividadeDescBreve()
+activate CTRL
+
+CTRL -> RAT : la=getRepositorioAreaAtividade()
+activate RAT
+
+RAT -> aaDB : lat = getAll()
+activate aaDB
+deactivate aaDB
+deactivate RAT
+deactivate CTRL
+
+UI --> ADM: mostra a lista de áreas de atividade e solicita \numa descrição da categoria de tarefa
+deactivate UI
+
+ADM -> UI : seleciona a área de atividade e introduz a descrição  
+activate UI
+UI -> CTRL : lct=getListaCompetenciasTecnicasByIdAreaAtividade(idAreaAtividade)
+activate CTRL
+
+CTRL -> RCT : lct=getRepositorioCompetenciaTecnica()
+activate RCT
+RCT -> ctDB : lct = getListaCompetenciaTecnicaByAreaAtividade(idAreaAtividade)
+activate ctDB
+deactivate ctDB
+deactivate RCT
+deactivate CTRL
+
+UI --> ADM : mostra lista de competências técnicas, quando existentes, \ne solicita a sua escolha 
+deactivate UI
+
+loop
+
+ADM -> UI : seleciona uma competência técnica
+activate UI
+UI -> CTRL: ct=getCompetenciaTecnicaByDescBreve(descBreve)
+activate CTRL
+
+CTRL -> CT: lista = getListaGrausProficienciaString()
+activate CT
+deactivate CT
+deactivate CTRL
+
+UI --> ADM: mostra a lista de graus de proficiência associados
+deactivate UI
+
+ADM -> UI: seleciona grau minimo e indica se é obrigatória ou desejável
+
+activate UI
+UI -> CTRL : addCompTecnicaToList(ct,obrigatoriedade,grauProficiencia)
+activate CTRL
+
+CTRL -> LISTACT : add(caraterct)
+activate LISTACT
+deactivate LISTACT
+
+deactivate CAT
+|||
+deactivate CTRL
+end loop
+UI --> ADM : apresenta dados e solicita confirmação
+deactivate UI
+
+ADM -> UI : confirma
+activate UI
+UI -> CTRL : registaCategoriaTarefa(CategoriaTarefaDesc, oAreaAtividade, listaCompTec)
+activate CTRL
+
+CTRL --> CAT** : cat = create(desc,aa,lcomptec)
+
+CTRL -> RCAT : getRepositorioCategoriaTarefa()
+activate RCAT
+RCAT -> ctarefaDB : save(cat)
+activate ctarefaDB
+deactivate ctarefaDB
+
+UI --> ADM : informa sucesso da operação
+deactivate RCAT
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+
+@enduml

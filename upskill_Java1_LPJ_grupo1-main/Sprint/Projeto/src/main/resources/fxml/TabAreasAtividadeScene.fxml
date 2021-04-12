@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.TabAreasAtividadeUI">
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnAdicionarNovaTarefa" defaultButton="true" layoutX="565.0" layoutY="490.0" mnemonicParsing="false" onAction="#actionAdicionarNovaTarefa" prefHeight="30.0" prefWidth="230.0" text="Adicionar Área de Atividade">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tableViewTarefas" prefHeight="486.0" prefWidth="800.0">
+               <columns>
+                  <TableColumn fx:id="tableViewAreaAtividadeCodUnico" maxWidth="800.0" prefWidth="200.0" text="Código Único" />
+                  <TableColumn fx:id="tableViewAreaAtividadeDescBreve" prefWidth="250.0" text="Descrição Breve" />
+                  <TableColumn fx:id="tableViewAreaAtividadeDescDetalhada" prefWidth="350.0" text="Descrição Detalhada" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

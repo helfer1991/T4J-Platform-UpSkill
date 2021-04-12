@@ -1,0 +1,142 @@
+@startuml
+skinparam classAttributeIconSize 0
+left to right direction
+
+class SeriarAnuncioUI {}
+
+class SeriarAnuncioController
+{
++getAnunciosPorSeriarNaoAutomaticos()
++getCandidaturas(anuncioId)
++classifica(candId, ordem)
++getColaboradores()
++addParticipante(emailPart)
++registaProcessoSeriacao()
+}
+
+class Plataforma {
+  -String designacao
+  +getRegistoOrganizacoes()
+  +getRegistoAnuncios()
+}
+
+class RegistoOrganizacoes {
+    +getOrganizacaoByEmailUtilizador(email)
+}
+
+class RegistoAnuncios {
+    +getAnunciosPorSeriarNaoAutomaticos(colab)
+    +getAnuncioPublicadoPor(colab, anuncioId)
+}
+
+class Organizacao {
+  -String nome
+  -String NIF
+  -String website
+  -String telefone
+  -String email
+  +getListaColaboradores()
+}
+
+class ListaColaboradores {
+    +getColaboradores()
+    +getColaboradorByEmail(email)
+}
+
+class Colaborador {
+  -String nome
+  -String funcao
+  -String telefone
+  -String email
+}
+
+class TipoRegimento
+{
+    -String designacao
+    -String descricaoRegras
+}
+
+
+class Freelancer {
+    -String nome
+    -String NIF
+    -String telefone
+    -String email
+}
+
+class Anuncio
+{
+    -Date dtInicioPublicitacao
+    -Date dtFimPublicitacao
+    -Date dtInicioCandidatura
+    -Date dtFimCandidatura
+    -Date dtInicioSeriacao
+    -Date dtFimSeriacao
+    +getListaCandidaturas()
+    +novoProcessoSeriacao(colab)
+    +registaProcessoSeriacao(ps)
+    -validaProcessoSeriacao(ps)
+    -setProcessoSeriacao(ps)
+}
+
+class ListaCandidaturas
+{
+    +getCandidaturas()
+    +getCandidatura(candId)
+}
+class Candidatura
+{
+    -Date dataCandidatura
+    -Double valorPretendido
+    -Integer nrDias
+    -String txtApresentacao
+    -String txtMotivacao
+}
+
+class Classificacao
+{
+    -Integer lugar
+    Classificacao(cand,ordem)
+}
+
+class ProcessoSeriacao
+{
+    -Date dataRealizacao
+    +ProcessoSeriacao(tipoReg, colab)
+    +addClassificacao(cand,ordem)
+    -validaClassificacao(class)
+    -addClassificacao(class)
+    +addParticipante(part)
+    +valida()
+}
+
+SeriarAnuncioUI ..> SeriarAnuncioController
+SeriarAnuncioController ..> Plataforma
+Plataforma "1" --> "1" RegistoOrganizacoes : tem
+Plataforma "1" --> "1" RegistoAnuncios : tem
+
+RegistoOrganizacoes "1" --> "*" Organizacao : tem registadas
+RegistoAnuncios "1" --> "*" Anuncio : publicita
+
+Organizacao "1" --> "1" ListaColaboradores: tem
+Organizacao "1" --> "1" ListaTarefas: tem
+
+ListaColaboradores "1" --> "1..*" Colaborador: tem
+ListaTarefas "1" --> "*" Tarefa: tem
+
+Anuncio "*" --> "1" TipoRegimento: rege-se por
+Anuncio "*" --> "1" Colaborador: publicado por
+Anuncio "1" --> "1" ListaCandidaturas: recebeu
+ListaCandidaturas "1" --> "*" Candidatura: tem
+Anuncio "1" --> "0..1" ProcessoSeriacao: espoleta
+
+Candidatura "*" -- "1"  Freelancer: realizada por
+
+ProcessoSeriacao "*" --> "1" TipoRegimento: decorre em concordância com
+ProcessoSeriacao "1" --> "1..*" Colaborador: realizado por
+ProcessoSeriacao "1" --> "*" Classificacao: resulta
+
+Classificacao "0..1" --> "1" Candidatura: referente a
+
+
+@enduml

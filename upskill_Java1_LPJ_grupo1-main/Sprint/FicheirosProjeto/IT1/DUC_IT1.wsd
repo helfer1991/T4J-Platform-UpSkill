@@ -1,0 +1,41 @@
+@startuml
+
+left to right direction
+
+actor Administrativo AS a
+actor Gestor AS g
+actor Colaborador AS c
+actor Utilizador_Não_Registado AS u
+actor Freelancer AS f
+actor Sistema AS s
+
+usecase "UC1 - Registar Organização" AS UC1
+usecase "UC2 - Definir Área de Atividade" AS UC2
+usecase "UC3 - Definir Categoria de Tarefa" AS UC3
+usecase "UC4 - Registar Competência Técnica" AS UC4
+usecase "UC5 - Registar Colaborador" AS UC5
+usecase "UC6 - Especificar Tarefa" AS UC6
+usecase "UC7 - Registar Freelancer" AS UC7
+usecase "UC8 - Publicar Tarefa" AS UC8
+usecase "UC9 - Efetuar Candidatura" AS UC9
+usecase "UC10 - Seriar (Não Automaticamente) Candidaturas de Anúncio" AS UC10
+usecase "UC11 - Alterar Candidatura" AS UC11
+usecase "UC12 - Remover Candidatura" AS UC12
+usecase "UC13 - Atribuir Tarefa" AS UC13
+
+u --> UC1
+a --> UC2
+a --> UC3 
+a --> UC4
+g --> UC5 
+c --> UC6
+a --> UC7 
+c --> UC8
+f --> UC9 
+c --> UC10
+f --> UC11
+f --> UC12
+g --> UC13
+s --> UC13
+
+@enduml

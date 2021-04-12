@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.TabCategoriaTarefaUI">
+   <center>
+      <AnchorPane minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="479.0" layoutY="5.0" text="Lista de Competências Técnicas">
+               <font>
+                  <Font name="Helvetica Light" size="13.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableViewCategoriaTarefa" onMouseClicked="#mouseTabCat" prefHeight="486.0" prefWidth="350.0">
+               <columns>
+                  <TableColumn fx:id="tableViewCatTarefaDesc" prefWidth="150.0" text="Descrição" />
+                  <TableColumn fx:id="tableViewCatTarefaAreaAtividade" prefWidth="200.0" text="Área de Atividade" />
+               </columns>
+            </TableView>
+            <TableView fx:id="listViewCatTarefaListCompTecnica" layoutX="349.0" layoutY="26.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="460.0" prefWidth="450.0">
+              <columns>
+                <TableColumn fx:id="listViewCatTarefaCatTecnica" prefWidth="150.0" text="Comp. Técnica" />
+                  <TableColumn fx:id="listViewCatTarefaCatTecnicaGrau" prefWidth="150.0" text="Grau Mínimo" />
+                <TableColumn fx:id="listViewCatTarefaCatTecnicaMandatory" prefWidth="150.0" text="Obrigatório" />
+              </columns>
+            </TableView>
+            <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="565.0" layoutY="490.0" mnemonicParsing="false" onAction="#actionAdicionarNovaCatTarefa" prefHeight="30.0" prefWidth="230.0" text="Adicionar Categoria de Tarefa">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

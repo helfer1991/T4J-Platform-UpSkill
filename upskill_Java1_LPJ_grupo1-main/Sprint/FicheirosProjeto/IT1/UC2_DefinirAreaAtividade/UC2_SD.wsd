@@ -1,0 +1,40 @@
+@startuml
+autonumber
+actor "Administrativo" as ADM
+
+participant ":RegistarAreaUI" as UI
+participant ":RegistarAreaController" as CTRL
+participant ":Plataforma" as PLAT
+participant "area:AreaAtividade" as AREA
+database AreaAtividadeDB as aaDB
+
+activate ADM
+ADM -> UI : nova área de atividade
+activate UI
+UI --> ADM : solicita dados \n(código, descrição breve e detalhada)
+deactivate UI
+
+ADM -> UI : introduz os dados solicitados
+activate UI
+
+
+
+UI --> ADM : apresenta dados e solicita confirmação
+deactivate UI
+
+ADM -> UI : confirma
+activate UI
+
+UI -> CTRL : registarAreaAtividade(cod, dsBreve, dsDet)
+activate CTRL
+CTRL --> AREA ** : aa = create(cod, dsBreve,dsDet)
+CTRL -> aaDB : save(aa)
+activate aaDB
+deactivate aaDB
+deactivate CTRL
+
+UI --> ADM : operação bem sucedida
+deactivate UI
+
+deactivate ADM
+@enduml

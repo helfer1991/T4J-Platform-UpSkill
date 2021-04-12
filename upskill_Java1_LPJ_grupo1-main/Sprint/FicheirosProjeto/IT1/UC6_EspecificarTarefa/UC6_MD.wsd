@@ -1,0 +1,50 @@
+@startuml
+
+left to right direction
+
+class Plataforma {
+}
+
+class Organização {
+    -nome
+    -nif
+    -website
+    -telefone
+    -email
+}
+
+class Tarefa {
+    -referencia
+    -designacao
+    -descInformal
+    -descTecnica
+    -estimativaDuracao
+    -estimativaCusto
+}
+
+class Categoria {
+    -descricao
+}
+
+class DemoApplication #DeepSkyBlue {
+    -Context 
+    -Data 
+    -Email 
+    -Role 
+    -Session 
+    -User 
+}
+
+class Colaborador #DeepSkyBlue{
+
+}
+
+
+    Plataforma "1" -- "*" Organização:tem registada >
+    Plataforma "1" -- "*" Categoria:possui >
+    Organização "1" -- "*" Tarefa: possui >
+    Tarefa "*" -- "1" Categoria:enquadra-se em >
+    DemoApplication "1" -- "*" Colaborador #DeepSkyBlue : possui > 
+    Tarefa "*" -- "1" Colaborador #DeepSkyBlue : especificada por >
+
+@enduml

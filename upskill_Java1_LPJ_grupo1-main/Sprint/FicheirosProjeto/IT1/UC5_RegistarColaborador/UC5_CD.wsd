@@ -1,0 +1,67 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class RegistarColaboradorUI {
+}
+
+class RegistarColaboradorController {
+  +Colaborador registarColaborador(nome, contacto, email)
+  +RepositorioColaboradorDB colabDB
+  +getOrganizacaoByEmailUtilizador(email)
+}
+
+class Plataforma {
+  +getUsersAPI()
+  +getAlgoritmoGeradorPasswords()
+}
+
+class Organizacao {
+}
+
+class Colaborador {
+  -String nome
+  -String funcao
+  -String telefone
+  -String email
+  +Colaborador(nome, contacto, email)
+}
+
+class Organizacao {
+  -String nome
+  -String NIF
+  -String website
+  -String telefone
+  -String email
+}
+
+class UsersAPI {
+  +getEmail()
+  +RegisterUserWithRoles(nome,telefone,email)
+}
+
+class RepositorioColaboradorDB {
+  +save(colab)
+}
+
+interface AlgoritmoGeradorPasswords{
+  +geraPassword()
+}
+
+
+RegistarColaboradorUI ..> RegistarColaboradorController
+
+RegistarColaboradorController ..> UsersAPI
+RegistarColaboradorController ..> Plataforma
+RegistarColaboradorController ..> RepositorioColaboradorDB
+RegistarColaboradorController ..> Organizacao
+RegistarColaboradorController ..> Colaborador
+
+Plataforma "1" -l> "*" Organizacao : possui
+
+Organizacao "1" --u> "1..*" Colaborador : possui
+Plataforma ..> AlgoritmoGeradorPasswords
+
+
+
+
+@enduml

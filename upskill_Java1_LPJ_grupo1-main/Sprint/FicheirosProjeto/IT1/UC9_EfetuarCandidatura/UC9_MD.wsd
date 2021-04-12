@@ -1,0 +1,102 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+class Plataforma {
+  -String designacao
+}
+
+class CompetenciaTecnica {
+  -String codigo
+  -String descBreve
+  -String descDetalhada
+}
+
+class GrauProficiencia {
+  -Integer valor
+  -String designacao
+}
+
+class Categoria {
+  -String id
+  -String descricao
+}
+
+class CaraterCT {
+  -Boolean obrigatoria
+}
+
+class Tarefa {
+  -String referencia
+  -String designacao
+  -String descInformal
+  -String descTecnica
+  -Integer duracaoEst
+  -Double custoEst
+}
+
+class Freelancer {
+    -String nome
+    -String NIF
+    -String telefone
+    -String email
+}
+
+class ReconhecimentoCT {
+    -Date dataReconhecimento
+}
+
+class HabilitacaoAcademica {
+    -String grau
+    -String designacaoCurso
+    -String nomeInstituicao
+    -Double mediaCurso
+}
+
+class Anuncio
+{
+    -Date dtInicioPublicitacao
+    -Date dtFimPublicitacao
+    -Date dtInicioCandidatura
+    -Date dtFimCandidatura
+    -Date dtInicioSeriacao
+    -Date dtFimSeriacao
+}
+
+class Candidatura
+{
+    -Date dataCandidatura
+    -Double valorPretendido
+    -Integer nrDias
+    -String txtApresentacao
+    -String txtMotivacao
+}
+
+Plataforma "1" -- "*" CompetenciaTecnica : possui >
+Plataforma "1" -- "*" Categoria : possui >
+Plataforma "1" -- "*" Anuncio : publicita >
+Plataforma "1" -- "*" Freelancer : tem/usa  >
+
+CompetenciaTecnica "1" --- "*" GrauProficiencia : aplica  >
+
+Categoria "*" -- "*" CompetenciaTecnica: requer >
+(Categoria, CompetenciaTecnica) .. CaraterCT
+CaraterCT "*" -- "1" GrauProficiencia: exige (como minimo)  >
+
+Anuncio "0..1" -- "1" Tarefa: publicita >
+Anuncio "0..1" -- "1" Tarefa: da origem <
+Anuncio "1" -- "*" Candidatura: recebe >
+
+Tarefa "*" -- "1"  Categoria: enquadra-se em >
+
+Candidatura "*" -- "1"  Freelancer: realizada por >
+
+Freelancer "1" -- "*" HabilitacaoAcademica: tem >
+Freelancer "1" -- "*" ReconhecimentoCT : recebe(u) >
+
+ReconhecimentoCT "*" -- "1" CompetenciaTecnica: relativa a >
+ReconhecimentoCT "*" -- "1" GrauProficiencia: reconhe >
+
+
+@enduml

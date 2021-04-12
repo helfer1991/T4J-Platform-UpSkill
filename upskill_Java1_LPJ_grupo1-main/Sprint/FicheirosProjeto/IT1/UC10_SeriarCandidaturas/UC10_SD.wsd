@@ -1,0 +1,171 @@
+@startuml
+autonumber
+
+actor "Colaborador" as COLAB
+participant ":SeriarAnuncioUI" as UI
+participant ":SeriarAnuncioController" as CTRL
+participant ":Plataforma" as PLAT
+participant "ro:RegistoOrganizacoes" as RO
+participant "ra:Registo\nAnuncios" as RANU
+participant "lstAnun:List<Anuncios>"
+participant "org:Organizacao" as ORG
+participant "lcolab:ListaColaboradores" as LCOLAB
+participant "lColabs:List<Colaborador>"
+participant "colab:Colaborador" as COLABORADOR
+participant "anu:Anuncio" as ANU
+participant "listaCand:ListaCandidaturas" as LCAND
+participant "lcand:List<Candidatura>"
+participant "cand:Candidatura"
+participant "ps:ProcessoSeriacao" as PS
+participant "class:Classificacao" as CLASS
+
+COLAB -> UI : inicia o processo não automático de seriação das candidaturas
+activate COLAB
+activate UI
+
+UI -> CTRL : lstAnun=getAnunciosPorSeriarNaoAutomaticos()
+activate CTRL
+
+CTRL -> PLAT: ro = getRegistoOrganizacoes()
+activate PLAT
+deactivate PLAT
+
+CTRL -> RO: org = getOrganizacaoByEmailUtilizador(email)
+activate RO
+deactivate RO
+
+CTRL -> ORG: lcolab = getListaColaboradores()
+activate ORG
+deactivate ORG
+
+CTRL -> LCOLAB: colab = getColaboradorByEmail(email)
+activate LCOLAB
+deactivate LCOLAB
+
+CTRL -> PLAT : ra = getRegistoAnuncios()
+activate PLAT
+deactivate PLAT
+
+CTRL -> RANU : lstAnun = getAnunciosPorSeriarNaoAutomaticos(colab)
+activate RANU
+deactivate RANU
+deactivate CTRL
+
+UI --> COLAB: mostra os anúncios publicadas \n pelo colaborador em fase de seriação não automática \n e que ainda não foram seriados e pede-lhe para escolher um
+deactivate UI
+
+
+COLAB -> UI : seleciona um anúncio
+activate UI
+
+UI -> CTRL : lcand= getCandidaturas(anuncioId)
+activate CTRL
+
+CTRL -> RANU: anu = getAnuncioPublicadoPor(colab, anuncioId)
+activate RANU
+deactivate RANU
+
+CTRL -> ANU : listaCand = getListaCandidaturas()
+activate ANU
+deactivate ANU
+
+CTRL -> LCAND : lcand = getCandidaturas()
+activate LCAND
+deactivate LCAND
+
+CTRL -> ANU : ps = novoProcessoSeriacao(colab)
+activate ANU
+ANU -> PS**: create(tipoReg, colab)
+
+deactivate ANU
+deactivate CTRL
+
+
+loop [ até que estejam classificadas todas as candidaturas]
+UI --> COLAB: mostra as candidaturas que o anúncio \n selecionado recebeu e que ainda estejam por classificar \n e solicita a escolha de uma dessas candidaturas
+deactivate UI
+
+COLAB -> UI : seleciona candidatura
+activate UI
+
+UI --> COLAB: solicita a classificação da candidatura selecionada
+deactivate UI
+
+
+COLAB -> UI : indica a classificação
+activate UI
+
+UI -> CTRL: classifica(candId, ordem)
+activate CTRL
+
+CTRL -> LCAND: cand = getCandidatura(candId)
+activate LCAND
+deactivate LCAND
+
+CTRL -> PS: addClassificacao(cand,ordem)
+activate PS
+
+PS -> CLASS**: class = create(cand,ordem)
+PS -> PS: validaClassificacao(class)
+PS -> PS: addClassificacao(class)
+deactivate PS
+deactivate CTRL
+end loop
+
+UI -> CTRL: lColabs = getColaboradores()
+activate CTRL
+
+CTRL -> LCOLAB : lColabs = getColaboradores()
+activate LCOLAB
+deactivate LCOLAB
+deactivate CTRL
+loop [até que estejam selecionados todos os outros colaboradores participantes]
+UI --> COLAB: mostra a lista dos outros colaboradores da mesma organização (não selecionado) e \n solicita a seleção de um colaborador participante no processo de seriação
+deactivate UI
+
+
+COLAB -> UI : seleciona um colaborador
+activate UI
+
+UI -> CTRL: addParticipante(emailPart)
+activate CTRL
+
+CTRL -> LCOLAB: part = getColaboradorByEmail(emailPart)
+activate LCOLAB
+deactivate LCOLAB
+
+CTRL -> PS: addParticipante(part)
+activate PS
+deactivate PS
+deactivate CTRL
+end loop
+
+UI --> COLAB: apresenta os dados, pedindo ao colaborador para confirmar
+deactivate UI
+
+
+COLAB -> UI : confirma
+activate UI
+
+UI -> CTRL: registaProcessoSeriacao()
+activate CTRL
+
+CTRL -> ANU: registaProcessoSeriacao(ps)
+activate ANU
+
+ANU -> ANU: validaProcessoSeriacao(ps)
+activate ANU
+ANU -> PS: valida()
+activate PS
+deactivate PS
+
+ANU -> ANU: setProcessoSeriacao(ps)
+deactivate ANU
+
+deactivate ANU
+deactivate CTRL
+UI --> COLAB: informa do sucesso da operação
+deactivate UI
+
+deactivate COLAB
+@enduml

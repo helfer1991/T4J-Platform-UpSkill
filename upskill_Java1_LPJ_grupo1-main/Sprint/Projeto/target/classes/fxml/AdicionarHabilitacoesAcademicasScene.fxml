@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.AdicionarHabilitacoesAcademicasUI">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0">
+         <left>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0">
+                     <children>
+                        <Label layoutX="124.0" layoutY="13.0" text="Habilitações Académicas">
+                           <font>
+                              <Font name="Helvetica" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNomeCurso" layoutX="125.0" layoutY="170.0" maxWidth="250.0" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#txtNomeCheckSize" prefHeight="30.0" prefWidth="200.0" promptText="Nome do Curso">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtFaculdade" layoutX="125.0" layoutY="210.0" maxWidth="250.0" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#txtNomeFaculdadeCheckSizeNotNumber" prefHeight="30.0" prefWidth="200.0" promptText="Nome da Faculdade">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtGrau" layoutX="125.0" layoutY="250.0" maxWidth="250.0" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#txtGrauCheckSize" prefHeight="30.0" prefWidth="200.0" promptText="Grau do Curso">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtMedia" layoutX="125.0" layoutY="290.0" maxWidth="100.0" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#txtMediaCheckNumber" prefHeight="30.0" prefWidth="200.0" promptText="Média Final">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Button defaultButton="true" layoutX="82.0" layoutY="395.0" maxHeight="30.0" mnemonicParsing="false" onAction="#actionAddOutraHabAcad" prefHeight="30.0" prefWidth="288.0" text="Adicionar Habilitação Academica">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font></Button>
+                        <Button layoutX="83.0" layoutY="435.0" maxHeight="30.0" mnemonicParsing="false" onAction="#actionAddReconhecimentoCT" prefHeight="30.0" prefWidth="287.0" text="Finalizar (Adicionar Reconhecimentos)">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font></Button>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

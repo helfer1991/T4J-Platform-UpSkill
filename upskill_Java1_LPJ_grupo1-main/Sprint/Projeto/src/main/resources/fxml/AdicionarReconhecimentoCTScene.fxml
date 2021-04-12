@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.AdicionarReconhecimentoCTUI">
+   <children>
+      <BorderPane layoutY="26.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0">
+         <top>
+            <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" StackPane.alignment="TOP_LEFT">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="125.0" layoutY="151.0" text="Data do Reconhecimento">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="reconDate" layoutX="125.0" layoutY="171.0" prefHeight="30.0" prefWidth="200.0" promptText="dd/mm/yy" />
+                        <ComboBox fx:id="cmbCompTecs" layoutX="125.0" layoutY="216.0" onAction="#CompTecSelec" prefHeight="30.0" prefWidth="200.0" promptText="Competência Técnica" />
+                        <ComboBox fx:id="cmbGrauCompTec" layoutX="125.0" layoutY="261.0" prefHeight="30.0" prefWidth="200.0" promptText="Grau de Proficiência" />
+                        <Button defaultButton="true" layoutX="125.0" layoutY="409.0" mnemonicParsing="false" onAction="#actionFinalFreelancerAdd" prefHeight="30.0" prefWidth="200.0" text="Finalizar">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="125.0" layoutY="369.0" mnemonicParsing="false" onAction="#actionAddOutroReconCT" prefHeight="30.0" prefWidth="200.0" text="Adicionar nova">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </top>
+      </BorderPane>
+      <Label layoutX="46.0" layoutY="16.0" text="Reconhecimento de Competências Técnicas">
+         <font>
+            <Font name="Helvetica" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

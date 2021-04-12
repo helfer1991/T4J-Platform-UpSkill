@@ -1,0 +1,30 @@
+@startuml
+hide footbox
+autonumber
+actor "Freelancer" as COL
+
+participant ":Sistema" as SIST
+
+activate COL
+
+    COL -> SIST : inicia a remoção de uma candidatura
+
+    activate SIST
+        SIST --> COL : solicita a escolha de uma das candidaturas por si efetuadas e, ainda, em período de candidaturas
+    deactivate SIST
+
+    COL -> SIST : escolhe a candidatura a remover
+
+    activate SIST
+        SIST --> COL : valida a opção, solicitando a sua confirmação
+    deactivate SIST
+
+    COL -> SIST : confirma
+
+    activate SIST
+        SIST --> COL : regista a opção e informa o Freelancer do sucesso da operação
+    deactivate SIST
+
+deactivate COL
+
+@enduml

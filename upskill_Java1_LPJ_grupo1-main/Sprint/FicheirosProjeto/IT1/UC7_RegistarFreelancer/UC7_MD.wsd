@@ -1,0 +1,69 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+class Plataforma {
+  -String designacao
+}
+
+class CompetenciaTecnica {
+  -String codigo
+  -String descBreve
+  -String descDetalhada
+}
+
+class GrauProficiencia {
+  -Integer valor
+  -String designacao
+}
+
+class EnderecoPostal {
+  -String local
+  -String codPostal
+  -String localidade
+}
+
+class Freelancer {
+    -String nome
+    -String NIF
+    -String telefone
+    -String email
+}
+
+class ReconhecimentoCT {
+    -Date dataReconhecimento
+}
+
+class HabilitacaoAcademica {
+    -String grau
+    -String designacaoCurso
+    -String nomeInstituicao
+    -Double mediaCurso
+}
+
+class Utilizador {
+  -String nome
+  -String email
+  -String password
+}
+
+class AlgoritmoGeradorPasswords {
+}
+
+Plataforma "1" -- "*" CompetenciaTecnica : possui >
+Plataforma "1" -- "*" Freelancer : tem/usa  >
+Plataforma "1" -- "1" AlgoritmoGeradorPasswords : recorre a >
+
+CompetenciaTecnica "1" --- "*" GrauProficiencia : aplica  >
+
+Freelancer "0..1" -- "1" Utilizador: atua como >
+Freelancer "0..1" -- "1" EnderecoPostal: tem >
+Freelancer "1" -- "*" HabilitacaoAcademica: tem >
+Freelancer "1" -- "*" ReconhecimentoCT : recebe(u) >
+
+ReconhecimentoCT "*" -- "1" CompetenciaTecnica: relativa a >
+ReconhecimentoCT "*" -- "1" GrauProficiencia: reconhe >
+
+AlgoritmoGeradorPasswords "1" -- "*" Utilizador : gera password >
+@enduml

@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.company.model.AtribuicaoTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec <<< FAILURE!
+com.company.model.AtribuicaoTest.testEquals()  Time elapsed: 0.022 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.company.model.AtribuicaoTest.testEquals(AtribuicaoTest.java:92)
+
+com.company.model.AtribuicaoTest.testGetId()  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.company.model.AtribuicaoTest.testGetId(AtribuicaoTest.java:49)
+
+com.company.model.AtribuicaoTest.testToString()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.company.model.AtribuicaoTest.testToString(AtribuicaoTest.java:106)
+
+com.company.model.AtribuicaoTest.testGetPickedClass()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.company.model.AtribuicaoTest.testGetPickedClass(AtribuicaoTest.java:63)
+
+com.company.model.AtribuicaoTest.testGetDataAtribuicao()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.company.model.AtribuicaoTest.testGetDataAtribuicao(AtribuicaoTest.java:77)
+

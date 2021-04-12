@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.TabCompetenciaTecnicaUI">
+    <center>
+        <AnchorPane minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <children>
+                  <TableView fx:id="tableViewCompTecnica" onMouseClicked="#mouseTabComp" prefHeight="486.0" prefWidth="575.0">
+                      <columns>
+                          <TableColumn fx:id="tableViewCodUnico" prefWidth="135.0" text="Código Único" />
+                          <TableColumn fx:id="tableViewAreaAtividade" prefWidth="145.0" text="Área de Atividade" />
+                          <TableColumn fx:id="tableViewDescBreve" prefWidth="145.0" text="Descrição Breve" />
+                          <TableColumn fx:id="tableViewDescDetalhada" prefWidth="150.0" text="Descrição Detalhada" />
+                      </columns>
+                  </TableView>
+            <TableView fx:id="listViewCompTecListaGrauProf" layoutX="575.0" layoutY="26.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="225.0">
+               <columns>
+                  <TableColumn fx:id="listViewCompTecnicaGrauValor" prefWidth="73.0" text="Valor" />
+                  <TableColumn fx:id="listViewCompTecnicaGrauDesigna" prefWidth="152.0" text="Designação" />
+               </columns>
+            </TableView>
+            <Label layoutX="600.0" layoutY="5.0" text="Lista de Graus de Proficiência">
+               <font>
+                  <Font name="Helvetica Light" size="13.0" />
+               </font>
+            </Label>
+                    <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="565.0" layoutY="490.0" mnemonicParsing="false" onAction="#actionAdicionarNovaCT" prefHeight="30.0" prefWidth="230.0" text="Adicionar Competência Técnica">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+                    </Button>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

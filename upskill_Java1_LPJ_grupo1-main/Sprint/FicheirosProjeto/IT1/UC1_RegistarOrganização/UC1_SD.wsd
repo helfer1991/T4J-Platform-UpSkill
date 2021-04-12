@@ -1,0 +1,55 @@
+@startuml
+autonumber
+
+actor "Utilizador Não Registado" as UNR
+participant ":Registar\nOrganizacaoUI" as UI
+participant ":RegistarOrganizacao\nController" as CTRL
+participant "Organizacao" as _ORG
+participant "org:Organizacao" as ORG
+participant "end:EnderecoPostal" as END
+participant "colab:Colaborador" as COLAB
+database OrganizacaoDB as orgDB
+
+activate UNR
+UNR -> UI : registar organização
+activate UI
+UNR <- UI : solicita dados organização \n(nome,NIF, endereço, telefone, website, email)\n e sobre o gestor (nome, função, telefone, email)
+deactivate UI
+UNR -> UI : introduz os dados solicitados
+activate UI
+
+UI -> CTRL : registarOrganizacao(nome,NIF,endLocal,endCodPostal,\nendLocalidade,tlf,site,email,nomeG,função,tlfG, emailG)
+activate CTRL
+
+CTRL -> _ORG: end = novoEndereco(endLocal,endCodPostal,endLocalidade)
+activate _ORG
+_ORG --> END ** : end = create(endLocal,endCodPostal,endLocalidade)
+deactivate _ORG
+
+CTRL -> _ORG: colab = novoColaborador(nomeG,função,tlfG, emailG)
+activate _ORG
+_ORG --> COLAB ** : colab = create(nomeG,função,tlfG, emailG)
+deactivate _ORG
+
+CTRL --> ORG ** : org = create(nome,NIF,end,tlf,site,email,colab)
+
+
+deactivate CTRL
+UI --> UNR : apresenta dados e solicita confirmação
+deactivate UI
+
+UNR -> UI : confirma
+activate UI
+
+UI -> CTRL: registarOrganizacao()
+activate CTRL
+CTRL -> orgDB : save(org)
+activate orgDB
+deactivate orgDB
+
+deactivate CTRL
+UI --> UNR : operação bem sucedida
+deactivate UI
+
+deactivate UNR
+@enduml

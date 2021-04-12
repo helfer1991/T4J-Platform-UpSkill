@@ -1,0 +1,35 @@
+@startuml
+skinparam classAttributeIconSize 0
+class AreaAtividade {
+  -String codigo
+  -String descBreve
+  -String descDetalhada
+  +AreaAtividade(String cod, String dsBreve, String dsDet)
+}
+
+class Plataforma {
+}
+
+
+class RegistarAreaAtividadeController {
+  +AreaAtividade registarAreaAtividade(String cod, String dsBreve, String dsDet)
+  +RepositorioAreaAtividadeDB aaDB
+}
+
+class RepositorioAreaAtividadeDB {
+  +save(AreaAtividade areaAtividade)
+}
+
+class RegistarAreaAtividadeUI {
+  
+}
+
+RegistarAreaAtividadeUI ..> RegistarAreaAtividadeController
+RegistarAreaAtividadeController ..> Plataforma
+RegistarAreaAtividadeController ..> AreaAtividade
+RegistarAreaAtividadeController ..> RepositorioAreaAtividadeDB
+
+Plataforma "1" --> "*" AreaAtividade : possui
+
+
+@enduml

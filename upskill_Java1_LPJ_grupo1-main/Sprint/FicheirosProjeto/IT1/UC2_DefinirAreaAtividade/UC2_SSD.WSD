@@ -1,0 +1,23 @@
+@startuml
+autonumber
+actor "Administrativo" as ADM
+
+activate ADM
+ADM -> ":Sistema" : nova área de atividade
+activate ":Sistema"
+":Sistema" --> ADM : solicita dados \n(código, descrição breve e detalhada)
+deactivate ":Sistema"
+
+ADM -> ":Sistema" : introduz os dados solicitados
+activate ":Sistema"
+":Sistema" --> ADM : apresenta dados e solicita confirmação
+deactivate ":Sistema"
+
+ADM -> ":Sistema" : confirma
+activate ":Sistema"
+":Sistema" --> ADM : operação bem sucedida
+deactivate ":Sistema"
+
+deactivate ADM
+
+@enduml

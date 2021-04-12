@@ -1,0 +1,46 @@
+@startuml
+hide methods
+left to right direction
+skinparam classAttributeIconSize 0
+
+
+class Plataforma {
+  -String designacao
+}
+
+class CompetenciaTecnica {
+  -String id
+  -String descBreve
+  -String descDetalhada
+}
+
+class AreaAtividade {
+  -String codigo
+  -String descBreve
+  -String descDetalhada
+}
+
+class GrauProficiencia {
+  -Integer valor
+  -String designacao
+}
+
+class Administrativo {
+
+}
+
+class Utilizador {
+  -String nome
+  -String email
+  -String password
+}
+
+Plataforma "1" -- "*" CompetenciaTecnica : possui 
+CompetenciaTecnica "*" -- "1" AreaAtividade : referente a 
+Administrativo "1" -- "*" CompetenciaTecnica: define 
+Administrativo "0..1" -- "1" Utilizador: atua como 
+Plataforma "1" -- "*" Administrativo : tem 
+Plataforma "1" -- "*" AreaAtividade : possui 
+CompetenciaTecnica "1" --- "*" GrauProficiencia : aplica  
+
+@enduml

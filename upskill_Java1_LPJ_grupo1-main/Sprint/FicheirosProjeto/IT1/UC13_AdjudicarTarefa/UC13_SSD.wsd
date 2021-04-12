@@ -1,0 +1,36 @@
+@startuml
+autonumber
+actor "Gestor" as GES
+
+participant ":Sistema" as SIST
+
+activate GES
+
+    GES -> SIST : inicia o processo de adjudicação de uma tarefa
+
+    activate SIST
+        SIST --> GES : pergunta qual o anúncio (dos já seriados) pretende o gestor escolher
+    deactivate SIST
+
+    GES -> SIST : escolhe o anúncio
+    
+    activate SIST
+        SIST --> GES : pede os dados (i.e. a organização que adjudica a tarefa, o freelancer a quem \né adjudicada a realização da tarefa, a descrição da tarefa adjudicada, \no período afeto, o valor remuneratório, uma referência ao anuncio)
+    deactivate SIST
+
+    GES -> SIST : introduz os dados solicitados
+    
+    activate SIST
+        SIST --> GES : apresenta os dados e solicita confirmação
+    deactivate SIST
+
+    GES -> SIST : confirma
+	
+
+    activate SIST
+        SIST --> GES : adjudica a tarefa e informa do sucesso da operação
+    deactivate SIST
+
+deactivate GES
+
+@enduml

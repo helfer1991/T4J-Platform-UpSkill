@@ -1,0 +1,85 @@
+@startuml
+skinparam classAttributeIconSize 0
+left to right direction
+
+class RegistarCandidaturaUI {
+}
+
+class RegistarCandidaturaController {
+  +List<Anuncio> getAnunciosElegiveisDoFreelancer()
+  +void registarCandidatura(anuncioId,valorPrt,nrDias,txtApres,txtMotiv)
+  +Freelancer getFreelancerByEmail(email)
+  +AnuncigetAnuncioById(int anuncioId)
+}
+
+class Plataforma {
+    +getUsersAPI()
+}
+
+class RegistoFreelancer
+{
+ +getFreelancerByEmail(email)
+}
+
+class Freelancer {
+    -String nome
+    -String NIF
+    -String telefone
+    -String email
+}
+
+class Anuncio
+{
+    -Date dtInicioPublicitacao
+    -Date dtFimPublicitacao
+    -Date dtInicioCandidatura
+    -Date dtFimCandidatura
+    -Date dtInicioSeriacao
+    -Date dtFimSeriacao
+}
+
+class Candidatura
+{
+    -Date dataCandidatura
+    -Double valorPretendido
+    -Integer nrDias
+    -String txtApresentacao
+    -String txtMotivacao
+    +Candidatura(anuncio,dataCand,valorPrt,nrDias,txtApres,txtMotiv,free)
+}
+
+class UsersAPI {
+  +getEmail()
+}
+
+class RepositorioFreelancerDB {
+  +find(String email)
+}
+
+class RepositorioAnuncioDB {
+  +getAllAnunciosDisponiveis()
+}
+
+class RepositorioCandidaturaDB {
+  +save(Candidatura cand)
+}
+
+RegistarCandidaturaUI ..> RegistarCandidaturaController
+RegistarCandidaturaController ..> Plataforma
+RegistarCandidaturaController ..> Freelancer
+RegistarCandidaturaController ..> Anuncio
+RegistarCandidaturaController ..> RepositorioAnuncioDB
+RegistarCandidaturaController ..> RepositorioCandidaturaDB
+RegistarCandidaturaController ..> RepositorioFreelancerDB
+
+Plataforma "1" --> "*" Anuncio : possui
+Plataforma "1" --> "*" Freelancer : possui
+Plataforma ..> UsersAPI
+
+Anuncio "1" --> "*" Candidatura : possui
+
+Candidatura "*" --> "1"  Freelancer: realizada por >
+
+
+
+@enduml

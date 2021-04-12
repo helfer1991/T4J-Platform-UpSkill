@@ -1,0 +1,27 @@
+@startuml
+autonumber
+actor "Colaborador"
+participant ": Sistema" as Sistema
+
+activate Colaborador
+Colaborador -> Sistema: Inicia a especificação de uma tarefa
+
+activate Sistema
+Sistema --> Colaborador: Solicita os dados \n(referência, designação, descrição informal, descrição técnica, duração, custo, categoria)
+deactivate Sistema
+
+Colaborador -> Sistema: Introduz os dados solicitados
+
+activate Sistema
+Sistema --> Colaborador: Apresenta os dados e solicita confirmação
+deactivate Sistema
+
+Colaborador -> Sistema: Confirma os dados
+
+activate Sistema
+Sistema --> Colaborador: Informa do sucesso da operação
+deactivate Sistema
+
+deactivate Colaborador
+
+@enduml

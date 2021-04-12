@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.TabColaboradoresSceneUI">
+   <center>
+      <AnchorPane minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableViewColaboradores" prefHeight="486.0" prefWidth="800.0">
+              <columns>
+                <TableColumn fx:id="tableViewColaboradoresNome" prefWidth="260.0" text="Nome" />
+                  <TableColumn fx:id="tableViewColaboradoresEmail" prefWidth="350.0" text="Email" />
+                <TableColumn fx:id="tableViewColaboradoresTelefone" prefWidth="190.0" text="Telefone" />
+              </columns>
+            </TableView>
+            <Button defaultButton="true" layoutX="565.0" layoutY="490.0" mnemonicParsing="false" onAction="#actionAdicionarNovoColaborador" prefHeight="30.0" prefWidth="230.0" text="Adicionar Colaborador">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1096px" preserveAspectRatio="none" style="width:3261px;height:1096px;" version="1.1" viewBox="0 0 3261 1096" width="3261px" zoomAndPan="magnify"><defs><filter height="300%" id="f1dzozpvmvvf4g" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="892.8203" style="stroke:#A80036;stroke-width:1.0;" width="10" x="62" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="785" y="121.9609"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="176.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="785" y="182.6641"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="170.0156" style="stroke:#A80036;stroke-width:1.0;" width="10" x="785" y="389.7734"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="157.6641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="785" y="590.1406"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="214.2734" style="stroke:#A80036;stroke-width:1.0;" width="10" x="785" y="778.1563"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="90.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1297" y="213.0156"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="60.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1297" y="420.125"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="73.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1297" y="620.4922"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="183.9219" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1297" y="808.5078"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="60.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1713" y="243.3672"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="2047" y="273.7188"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="2156.5" y="450.4766"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="36.6094" style="stroke:#A80036;stroke-width:1.0;" width="10" x="2156.5" y="848.8594"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="3172.5" y="932.0781"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="186.3672" style="stroke:#000000;stroke-width:2.0;" width="2641.5" x="10" y="318.7188"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="199.3672" style="stroke:#000000;stroke-width:2.0;" width="2932.5" x="10" y="519.0859"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="67" x2="67" y1="89.6094" y2="1010.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="790" x2="790" y1="89.6094" y2="1010.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1302" x2="1302" y1="89.6094" y2="1010.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1718" x2="1718" y1="89.6094" y2="1010.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="2051.5" x2="2051.5" y1="89.6094" y2="1010.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="2161.5" x2="2161.5" y1="849.8125" y2="1010.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="2551.5" x2="2551.5" y1="491.7813" y2="1010.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="2791.5" x2="2791.5" y1="705.1484" y2="1010.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="3013.5" x2="3013.5" y1="896.4219" y2="1010.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="3177.5" x2="3177.5" y1="89.6094" y2="1010.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="20" y="86.5332">Administrativo</text><ellipse cx="67" cy="15" fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M67,23 L67,50 M54,31 L80,31 M67,50 L54,65 M67,50 L80,65 " fill="none" filter="url(#f1dzozpvmvvf4g)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="20" y="1023.9629">Administrativo</text><ellipse cx="67" cy="1037.0391" fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M67,1045.0391 L67,1072.0391 M54,1053.0391 L80,1053.0391 M67,1072.0391 L54,1087.0391 M67,1072.0391 L80,1087.0391 " fill="none" filter="url(#f1dzozpvmvvf4g)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="152" x="712" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="719" y="74.5332">:RegistarFreelancerUI</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="152" x="712" y="1009.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="719" y="1030.9629">:RegistarFreelancerUI</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="202" x="1199" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="188" x="1206" y="74.5332">:RegistarFreelancerController</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="202" x="1199" y="1009.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="188" x="1206" y="1030.9629">:RegistarFreelancerController</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="86" x="1673" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="1680" y="74.5332">:Plataforma</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="86" x="1673" y="1009.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="1680" y="1030.9629">:Plataforma</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="75" x="2012.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="2019.5" y="74.5332">:UsersAPI</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="75" x="2012.5" y="1009.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="2019.5" y="1030.9629">:UsersAPI</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="116" x="2101.5" y="1009.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="2108.5" y="1030.9629">free: Freelancer</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="176" x="2461.5" y="1009.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="2468.5" y="1030.9629">ha: HabilitacaoAcademica</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="277" x="2651.5" y="1009.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="263" x="2658.5" y="1030.9629">rct: ReconhecimentoCompetenciaTecnica</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="138" x="2942.5" y="1009.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="2949.5" y="1030.9629">ep: EnderecoPostal</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="3094.5" y="86.5332">RepositorioFreelancerDB</text><path d="M3159.5,36 C3159.5,26 3177.5,26 3177.5,26 C3177.5,26 3195.5,26 3195.5,36 L3195.5,62 C3195.5,72 3177.5,72 3177.5,72 C3177.5,72 3159.5,72 3159.5,62 L3159.5,36 " fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" style="stroke:#000000;stroke-width:1.5;"/><path d="M3159.5,36 C3159.5,46 3177.5,46 3177.5,46 C3177.5,46 3195.5,46 3195.5,36 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="3094.5" y="1023.9629">RepositorioFreelancerDB</text><path d="M3159.5,1037.0391 C3159.5,1027.0391 3177.5,1027.0391 3177.5,1027.0391 C3177.5,1027.0391 3195.5,1027.0391 3195.5,1037.0391 L3195.5,1063.0391 C3195.5,1073.0391 3177.5,1073.0391 3177.5,1073.0391 C3177.5,1073.0391 3159.5,1073.0391 3159.5,1063.0391 L3159.5,1037.0391 " fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" style="stroke:#000000;stroke-width:1.5;"/><path d="M3159.5,1037.0391 C3159.5,1047.0391 3177.5,1047.0391 3177.5,1047.0391 C3177.5,1047.0391 3195.5,1047.0391 3195.5,1037.0391 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="892.8203" style="stroke:#A80036;stroke-width:1.0;" width="10" x="62" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="785" y="121.9609"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="176.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="785" y="182.6641"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="170.0156" style="stroke:#A80036;stroke-width:1.0;" width="10" x="785" y="389.7734"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="157.6641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="785" y="590.1406"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="214.2734" style="stroke:#A80036;stroke-width:1.0;" width="10" x="785" y="778.1563"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="90.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1297" y="213.0156"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="60.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1297" y="420.125"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="73.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1297" y="620.4922"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="183.9219" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1297" y="808.5078"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="60.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1713" y="243.3672"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="2047" y="273.7188"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="2156.5" y="450.4766"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="36.6094" style="stroke:#A80036;stroke-width:1.0;" width="10" x="2156.5" y="848.8594"/><rect fill="#FFFFFF" filter="url(#f1dzozpvmvvf4g)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="3172.5" y="932.0781"/><polygon fill="#A80036" points="773,117.9609,783,121.9609,773,125.9609,777,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="72" x2="779" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="79" y="117.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="184" x="90" y="117.1045">inicia o registo de um freelancer</text><polygon fill="#A80036" points="83,148.3125,73,152.3125,83,156.3125,79,152.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="77" x2="789" y1="152.3125" y2="152.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="89" y="147.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="592" x="100" y="147.4561">solicita os dados do freelancer (i.e., o nome, o NIF, o endereço postal, um contacto telefónico e email)</text><polygon fill="#A80036" points="773,178.6641,783,182.6641,773,186.6641,777,182.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="72" x2="779" y1="182.6641" y2="182.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="79" y="177.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="90" y="177.8076">introduz os dados solicitados</text><polygon fill="#A80036" points="1285,209.0156,1295,213.0156,1285,217.0156,1289,213.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="795" x2="1291" y1="213.0156" y2="213.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="802" y="208.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="288" x="813" y="208.1592">registarFreelancer(nome, nif, codPostal, tlf, email)</text><polygon fill="#A80036" points="1701,239.3672,1711,243.3672,1701,247.3672,1705,243.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1307" x2="1707" y1="243.3672" y2="243.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1314" y="238.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="294" x="1325" y="238.5107">registaFreelancerAPI(nome,email,tlf,password,role)</text><polygon fill="#A80036" points="2035,269.7188,2045,273.7188,2035,277.7188,2039,273.7188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1723" x2="2041" y1="273.7188" y2="273.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1730" y="268.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="294" x="1741" y="268.8623">registaFreelancerAPI(nome,email,tlf,password,role)</text><path d="M10,318.7188 L83,318.7188 L83,326.7188 L73,336.7188 L10,336.7188 L10,318.7188 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="186.3672" style="stroke:#000000;stroke-width:2.0;" width="2641.5" x="10" y="318.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="28" x="25" y="333.2139">loop</text><polygon fill="#A80036" points="83,355.4219,73,359.4219,83,363.4219,79,359.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="77" x2="789" y1="359.4219" y2="359.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="89" y="354.5654">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="632" x="100" y="354.5654">solicita a introdução de uma habilitação académica (grau, designação do curso, instituição e média do curso)</text><polygon fill="#A80036" points="773,385.7734,783,389.7734,773,393.7734,777,389.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="72" x2="779" y1="389.7734" y2="389.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="79" y="384.917">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="90" y="384.917">introduz os dados solicitados</text><polygon fill="#A80036" points="1285,416.125,1295,420.125,1285,424.125,1289,420.125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="795" x2="1291" y1="420.125" y2="420.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="802" y="415.2686">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="347" x="813" y="415.2686">registarHabilitacaoAcademica(grau, nomeCurso, fac, media)</text><polygon fill="#A80036" points="2144.5,446.4766,2154.5,450.4766,2144.5,454.4766,2148.5,450.4766" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1307" x2="2150.5" y1="450.4766" y2="450.4766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="1314" y="445.6201">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="347" x="1332" y="445.6201">registarHabilitacaoAcademica(grau, nomeCurso, fac, media)</text><polygon fill="#A80036" points="2449.5,476.8281,2459.5,480.8281,2449.5,484.8281,2453.5,480.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="2161.5" x2="2455.5" y1="480.8281" y2="480.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="2168.5" y="475.9717">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="253" x="2186.5" y="475.9717">lHab = create(grau, nomeCurso, fac, media)</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="176" x="2461.5" y="458.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="2468.5" y="480.0098">ha: HabilitacaoAcademica</text><path d="M10,519.0859 L83,519.0859 L83,527.0859 L73,537.0859 L10,537.0859 L10,519.0859 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="199.3672" style="stroke:#000000;stroke-width:2.0;" width="2932.5" x="10" y="519.0859"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="28" x="25" y="533.5811">loop</text><polygon fill="#A80036" points="83,555.7891,73,559.7891,83,563.7891,79,559.7891" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="77" x2="789" y1="559.7891" y2="559.7891"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="89" y="554.9326">12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="671" x="107" y="554.9326">solicita a introdução de reconhecimento de competências técnicas (data, competência técnica, grau de proficiência)</text><polygon fill="#A80036" points="773,586.1406,783,590.1406,773,594.1406,777,590.1406" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="72" x2="779" y1="590.1406" y2="590.1406"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="79" y="585.2842">13</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="97" y="585.2842">introduz os dados solicitados</text><polygon fill="#A80036" points="1285,616.4922,1295,620.4922,1285,624.4922,1289,620.4922" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="795" x2="1291" y1="620.4922" y2="620.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="802" y="615.6357">14</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="374" x="820" y="615.6357">registarReconhecimentoCT(data, compTecnica, grauProficiencia)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1307" x2="1349" y1="650.8438" y2="650.8438"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1349" x2="1349" y1="650.8438" y2="663.8438"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1308" x2="1349" y1="663.8438" y2="663.8438"/><polygon fill="#A80036" points="1318,659.8438,1308,663.8438,1318,667.8438,1314,663.8438" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="1314" y="645.9873">15</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="374" x="1332" y="645.9873">registarReconhecimentoCT(data, compTecnica, grauProficiencia)</text><polygon fill="#A80036" points="2639.5,690.1953,2649.5,694.1953,2639.5,698.1953,2643.5,694.1953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1302" x2="2645.5" y1="694.1953" y2="694.1953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="1309" y="689.3389">16</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="254" x="1327" y="689.3389">create(data, compTecnica, grauProficiencia)</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="277" x="2651.5" y="671.8438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="263" x="2658.5" y="693.377">rct: ReconhecimentoCompetenciaTecnica</text><polygon fill="#A80036" points="83,743.8047,73,747.8047,83,751.8047,79,747.8047" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="77" x2="789" y1="747.8047" y2="747.8047"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="89" y="742.9482">17</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="226" x="107" y="742.9482">apresenta dados e solicita confirmação</text><polygon fill="#A80036" points="773,774.1563,783,778.1563,773,782.1563,777,778.1563" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="72" x2="779" y1="778.1563" y2="778.1563"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="79" y="773.2998">18</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="97" y="773.2998">confirma</text><polygon fill="#A80036" points="1285,804.5078,1295,808.5078,1285,812.5078,1289,808.5078" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="795" x2="1291" y1="808.5078" y2="808.5078"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="802" y="803.6514">19</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="465" x="820" y="803.6514">registarFreelancer(nome,nif,email,tlf,morada,codpostal,localidade,lHab,lRecFree)</text><polygon fill="#A80036" points="2089.5,834.8594,2099.5,838.8594,2089.5,842.8594,2093.5,838.8594" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1307" x2="2095.5" y1="838.8594" y2="838.8594"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="1314" y="834.0029">20</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="434" x="1332" y="834.0029">free = create(nome,nif,email,tlf,morada,codpostal,localidade,lHab,lRecFree)</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="116" x="2101.5" y="816.5078"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="2108.5" y="838.041">free: Freelancer</text><polygon fill="#A80036" points="2930.5,881.4688,2940.5,885.4688,2930.5,889.4688,2934.5,885.4688" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="2161.5" x2="2936.5" y1="885.4688" y2="885.4688"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="2168.5" y="880.6123">21</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="211" x="2186.5" y="880.6123">create(codPostal,morada,localidade)</text><rect fill="#FEFECE" filter="url(#f1dzozpvmvvf4g)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="138" x="2942.5" y="863.1172"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="2949.5" y="884.6504">ep: EnderecoPostal</text><polygon fill="#A80036" points="3160.5,928.0781,3170.5,932.0781,3160.5,936.0781,3164.5,932.0781" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1307" x2="3166.5" y1="932.0781" y2="932.0781"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="1314" y="927.2217">22</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="1332" y="927.2217">save(free)</text><polygon fill="#A80036" points="78,988.4297,68,992.4297,78,996.4297,74,992.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="72" x2="789" y1="992.4297" y2="992.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="84" y="987.5732">23</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="170" x="102" y="987.5732">informa sucesso da operação</text><!--MD5=[a62ac5835ec94fb5d9ce17e3794f87ef]
+@startuml
+autonumber
+'hide footbox
+actor "Administrativo" as ADM
+
+participant ":RegistarFreelancerUI" as UI
+participant ":RegistarFreelancerController" as CTRL
+participant ":Plataforma" as PLAT
+participant ":UsersAPI" as UAPI
+participant "free: Freelancer" as FR
+participant "ha: HabilitacaoAcademica" as HA
+participant "rct: ReconhecimentoCompetenciaTecnica" as RCT
+participant "ep: EnderecoPostal" as EP
+database RepositorioFreelancerDB as freeDB
+
+
+activate ADM
+
+ADM -> UI : inicia o registo de um freelancer
+activate UI
+UI - -> ADM : solicita os dados do freelancer (i.e., o nome, o NIF, o endereço postal, um contacto telefónico e email)
+deactivate UI
+
+ADM -> UI : introduz os dados solicitados
+activate UI
+UI -> CTRL : registarFreelancer(nome, nif, codPostal, tlf, email)
+activate CTRL
+CTRL -> PLAT : registaFreelancerAPI(nome,email,tlf,password,role)
+activate PLAT
+PLAT -> UAPI : registaFreelancerAPI(nome,email,tlf,password,role)
+activate UAPI
+deactivate UAPI
+deactivate PLAT
+deactivate FR
+deactivate CTRL
+
+loop
+UI - -> ADM : solicita a introdução de uma habilitação académica (grau, designação do curso, instituição e média do curso)
+deactivate UI
+ADM -> UI : introduz os dados solicitados
+activate UI
+UI -> CTRL : registarHabilitacaoAcademica(grau, nomeCurso, fac, media)
+activate CTRL
+CTRL ->  FR : registarHabilitacaoAcademica(grau, nomeCurso, fac, media)
+activate FR
+FR -> HA** : lHab = create(grau, nomeCurso, fac, media)
+
+deactivate FR
+
+deactivate CTRL
+end loop
+
+loop
+UI - -> ADM : solicita a introdução de reconhecimento de competências técnicas (data, competência técnica, grau de proficiência)
+deactivate UI
+ADM -> UI : introduz os dados solicitados
+activate UI
+UI -> CTRL : registarReconhecimentoCT(data, compTecnica, grauProficiencia)
+activate CTRL
+CTRL -> CTRL : registarReconhecimentoCT(data, compTecnica, grauProficiencia)
+CTRL -> RCT** : create(data, compTecnica, grauProficiencia)
+deactivate CTRL
+end loop 
+
+
+
+UI - -> ADM : apresenta dados e solicita confirmação
+deactivate UI
+
+ADM -> UI : confirma
+activate UI
+UI -> CTRL : registarFreelancer(nome,nif,email,tlf,morada,codpostal,localidade,lHab,lRecFree)
+activate CTRL
+CTRL -> FR** : free = create(nome,nif,email,tlf,morada,codpostal,localidade,lHab,lRecFree)
+activate FR
+FR - -> EP** : create(codPostal,morada,localidade)
+deactivate FR
+CTRL -> freeDB : save(free)
+activate freeDB
+deactivate freeDB
+UI - -> ADM : informa sucesso da operação
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+
+@enduml
+
+@startuml
+autonumber
+actor "Administrativo" as ADM
+
+participant ":RegistarFreelancerUI" as UI
+participant ":RegistarFreelancerController" as CTRL
+participant ":Plataforma" as PLAT
+participant ":UsersAPI" as UAPI
+participant "free: Freelancer" as FR
+participant "ha: HabilitacaoAcademica" as HA
+participant "rct: ReconhecimentoCompetenciaTecnica" as RCT
+participant "ep: EnderecoPostal" as EP
+database RepositorioFreelancerDB as freeDB
+
+
+activate ADM
+
+ADM -> UI : inicia o registo de um freelancer
+activate UI
+UI - -> ADM : solicita os dados do freelancer (i.e., o nome, o NIF, o endereço postal, um contacto telefónico e email)
+deactivate UI
+
+ADM -> UI : introduz os dados solicitados
+activate UI
+UI -> CTRL : registarFreelancer(nome, nif, codPostal, tlf, email)
+activate CTRL
+CTRL -> PLAT : registaFreelancerAPI(nome,email,tlf,password,role)
+activate PLAT
+PLAT -> UAPI : registaFreelancerAPI(nome,email,tlf,password,role)
+activate UAPI
+deactivate UAPI
+deactivate PLAT
+deactivate FR
+deactivate CTRL
+
+loop
+UI - -> ADM : solicita a introdução de uma habilitação académica (grau, designação do curso, instituição e média do curso)
+deactivate UI
+ADM -> UI : introduz os dados solicitados
+activate UI
+UI -> CTRL : registarHabilitacaoAcademica(grau, nomeCurso, fac, media)
+activate CTRL
+CTRL ->  FR : registarHabilitacaoAcademica(grau, nomeCurso, fac, media)
+activate FR
+FR -> HA** : lHab = create(grau, nomeCurso, fac, media)
+
+deactivate FR
+
+deactivate CTRL
+end loop
+
+loop
+UI - -> ADM : solicita a introdução de reconhecimento de competências técnicas (data, competência técnica, grau de proficiência)
+deactivate UI
+ADM -> UI : introduz os dados solicitados
+activate UI
+UI -> CTRL : registarReconhecimentoCT(data, compTecnica, grauProficiencia)
+activate CTRL
+CTRL -> CTRL : registarReconhecimentoCT(data, compTecnica, grauProficiencia)
+CTRL -> RCT** : create(data, compTecnica, grauProficiencia)
+deactivate CTRL
+end loop 
+
+
+
+UI - -> ADM : apresenta dados e solicita confirmação
+deactivate UI
+
+ADM -> UI : confirma
+activate UI
+UI -> CTRL : registarFreelancer(nome,nif,email,tlf,morada,codpostal,localidade,lHab,lRecFree)
+activate CTRL
+CTRL -> FR** : free = create(nome,nif,email,tlf,morada,codpostal,localidade,lHab,lRecFree)
+activate FR
+FR - -> EP** : create(codPostal,morada,localidade)
+deactivate FR
+CTRL -> freeDB : save(free)
+activate freeDB
+deactivate freeDB
+UI - -> ADM : informa sucesso da operação
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 10:25:05 WET 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

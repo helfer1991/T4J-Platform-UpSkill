@@ -1,0 +1,177 @@
+@startuml
+
+!define table(x) class x << (T,#FFAAAA) >>
+
+
+table(Organizacao)  {
+  NIF < PK >
+  email<FK | UK>
+  idEnderecoPostal < FK >
+  emailGestor<FK>
+  website
+}
+
+table(Colaborador){
+    emailColaborador<PK | FK>
+    NIFOrganizacao < FK >
+}
+
+table(EnderecoPostal){
+    id < PK >
+    morada
+    codigopostal
+    localidade
+}
+
+table(Tarefa){
+    referencia < PK >
+    designacao
+    descInformal
+    descTecnica
+    duracaoEst
+    custoEst
+    emailColaborador < FK >
+    NIFOrganizacao<PK | FK>
+    idCatTar < FK >
+}
+
+table(Utilizador){
+    email < PK >
+    nome
+    telefone
+}
+
+table(Freelancer){
+    NIF < PK >
+    emailUser< FK | UK >
+    idEnderecoPostal < FK >
+}
+
+table(CategoriaTarefa){
+    id < PK > 
+    desc
+    idAreaAtividade < FK >
+}
+
+table(CompetenciaTecnica){
+    codUnico < PK >
+    descBreve
+    descDetalhada
+    idAreaAtividade < FK > 
+}
+
+
+table(Anuncio){
+    id <PK | FK >
+    dtInicioPublicacao
+    dtFimPublicacao
+    dtIdnicioCandidatura
+    dtFimCandidatura
+    dtInicioSeriacao
+    dtFimSeriacao
+    idTipoRegimento<FK>
+    nifOrganizacao<FK>
+}
+
+
+table(AreaAtividade){
+    id <PK>
+    descBreve
+    descDetalhada
+}
+
+table(GrauProficiencia){
+    valor <PK>
+    designacao
+    codCompetenciaTecnica <PK | FK>
+}
+
+
+table(HabilitacaoAcademica){
+    id<PK>
+    grau
+    designacaoCurso
+    nomeInstituicao
+    mediaCurso
+    NIFFreelancer<FK>
+}
+
+table(TipoRegimento){
+    id <PK>
+    designacao
+    descricao
+}
+
+table(CaraterCT){ 
+    idCategoriaTarefa<PK | FK>
+    codCompetenciaTecnica<PK | FK>
+    obrigatorio
+    grauMinimoProficiencia <FK>
+}
+
+table(ReconhecimentoCT){
+    dataReconhecimento
+    NIFFreelancer <PK, FK>
+    valorCompetenciaTecnicaReconhecido <PK | FK>
+    codCompetenciaTecnica <PK | FK>
+}
+
+table(ProcessoSeriacao){
+    dataRealizacao
+    emailColaborador <FK>
+    idAnuncio <PK | FK>
+}
+
+table(Classificacao){
+    idProcessoSeriacao< PK | FK >
+    dataHora
+    lugarClassificacao
+    idCandidatura < PK | FK >
+    nifFreelancer< FK >
+}
+
+table(ListaColaboradorProcessoSeriacao){
+    idProcessoSeriacao<FK>
+    emailColaborador<FK>
+}
+
+table(Candidatura){
+    id <PK>
+    dataCandidatura
+    valorPretendido
+    nrDias
+    txtApresentacao <N>
+    txtMotivacao<N>
+    NIFFreelancer<PK | FK>
+    idAnuncio<FK>
+}
+
+User ||--o{ Colaborador
+User ||--o{ Freelancer
+User ||--o{ Organizacao
+
+Organizacao ||--o{ Tarefa
+Classificacao |o--o{ Candidatura
+Classificacao ||--|{ ListaColaboradorClassificacao
+ListaColaboradorClassificacao }o--|| Colaborador
+Classificacao ||--|| ProcessoSeriacao
+Anuncio ||--o| ProcessoSeriacao
+Colaborador ||--o{ Tarefa
+Freelancer ||--o{ Candidatura
+Freelancer |o--|| EnderecoPostal
+Freelancer ||--|{ ReconhecimentoCT
+ReconhecimentoCT }o--|| GrauProficiencia
+Organizacao|o--|| EnderecoPostal
+Organizacao ||--|| Colaborador
+Organizacao ||--|{ Colaborador
+Freelancer ||--|{ HabilitacaoAcademica
+CompetenciaTecnica |o--|| AreaAtividade
+CompetenciaTecnica ||--|{ GrauProficiencia
+CategoriaTarefa }o--|| AreaAtividade
+Tarefa }o--|| CategoriaTarefa
+Anuncio ||--o{ Candidatura
+Anuncio }o--|| TipoRegimento
+CategoriaTarefa ||--o{ CaraterCT
+CaraterCT }o--||GrauProficiencia
+Anuncio |o--|| Tarefa
+@enduml

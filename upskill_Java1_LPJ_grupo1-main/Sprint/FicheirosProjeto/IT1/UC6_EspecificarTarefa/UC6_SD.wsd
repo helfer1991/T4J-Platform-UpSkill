@@ -1,0 +1,78 @@
+@startuml
+autonumber
+actor "Colaborador" as Colab
+
+participant ": AdicionarTarefaUI" as UI
+participant ": RegistarTarefaController" as CTRL
+participant "RepositorioCategoriaTarefa" as Cat
+participant "RepositorioColaborador" as RC
+participant "t: Tarefa" as TAREFA
+participant "RepositorioTarefa" as RT
+database CategoriaTarefaDB as ctDB
+database ColaboradorDB as colabDB
+database TarefaDB as tafDB
+
+activate Colab
+Colab -> UI : Inicia a especificação de uma tarefa
+
+activate UI
+UI -> CTRL : listd = getListaCatTarefaIdDesc()
+activate CTRL 
+
+CTRL -> Cat : getAllCatTarefa()
+activate Cat
+
+Cat -> ctDB : getAll()
+activate ctDB
+deactivate ctDB
+deactivate Cat
+
+deactivate CTRL
+
+UI --> Colab : Solicita os dados
+deactivate UI
+
+Colab -> UI : Introduz os dados
+activate UI
+
+UI -> CTRL : novaTarefa(String ref, String designacao, \nString descrInformal, String descrTecnica, \nInteger duracaoEst, Double custoEst, \nCategoriaTarefa catTarefa, Colaborador colab)
+activate CTRL
+
+group ref
+        CTRL -> CTRL : email = getMyEmail()
+end
+
+CTRL -> RC : colab = getColaboradorByEmail(email)
+activate RC
+RC -> colabDB : find()
+activate colabDB
+deactivate colabDB
+deactivate RC
+
+CTRL --> TAREFA** : create(ref, designacao, descrInformal, descrTecnica,\n duracaoEst, custoEst, catTarefa, colab)
+deactivate CTRL
+
+UI --> Colab : Apresenta os dados e solicicta confirmação
+deactivate UI
+ 
+Colab -> UI : Confirma
+activate UI
+
+UI -> CTRL : novaTarefa()
+activate CTRL
+
+CTRL -> RT : getRepositorioTarefa()
+activate RT
+
+RT -> tafDB : save(t)
+activate tafDB
+deactivate tafDB
+deactivate RT
+deactivate CTRL
+
+UI --> Colab : Informa operação bem sucedida
+
+deactivate UI
+deactivate Colab
+
+@enduml

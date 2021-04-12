@@ -1,0 +1,106 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+class Organizacao {
+  -String nome
+  -String NIF
+  -String website
+  -String telefone
+  -String email
+}
+
+class Colaborador {
+  -String nome
+  -String funcao
+  -String telefone
+  -String email
+}
+
+class Tarefa {
+  -String referencia
+  -String designacao
+  -String descInformal
+  -String descTecnica
+  -Integer duracaoEst
+  -Double custoEst
+}
+
+class TipoRegimento {
+    -String designacao
+    -String descRegras
+}
+
+class Freelancer {
+    -String nome
+    -String nif
+    -String telefone
+    -String email
+}
+
+class Atribuicao {
+    -Date dataInicio
+    -Date dataFim
+    -Integer valor
+    -Integer numSequencial
+}
+
+class Anuncio {
+    -Date dtInicioPublicitacao
+    -Date dtFimPublicitacao
+    -Date dtInicioCandidatura
+    -Date dtFimCandidatura
+    -Date dtInicioSeriacao
+    -Date dtFimSeriacao
+}
+
+class Candidatura {
+    -Date dataCandidatura
+    -Double valorPretendido
+    -Integer nrDias
+    -String txtApresentacao
+    -String txtMotivacao
+}
+
+class Classificacao {
+    -Integer lugar
+}
+
+class ProcessoSeriacao {
+    -Date dataRealizacao
+}
+
+
+Organizacao "1" -- "1..*" Colaborador: tem >
+Organizacao "1" -- "1" Colaborador: tem gestor >
+Organizacao "0..1" -- "1" EnderecoPostal: localizada em >
+Organizacao "1" -- "*" Tarefa: possui >
+
+Tarefa "*" -- "1" Colaborador: especificada por >
+
+
+Anuncio "0..1" -- "1" Tarefa: publicita >
+Anuncio "0..1" -- "1" Tarefa: dá origem <
+Anuncio "*" -- "1" TipoRegimento: rege-se por >
+Anuncio "*" -- "1" Colaborador: publicado por >
+Anuncio "1" -- "*" Candidatura: recebe >
+Anuncio "1" -- "0..1" ProcessoSeriacao: espoleta >
+
+Candidatura "*" -- "1"  Freelancer: realizada por >
+
+ProcessoSeriacao "*" -- "1" TipoRegimento: decorre em concordância com >
+ProcessoSeriacao "1" -- "1..*" Colaborador: realizado por >
+ProcessoSeriacao "1" -- "*" Classificacao: resulta >
+
+Classificacao "0..1" -- "1" Candidatura: referente a >
+
+Atribuicao "1" -- "1" Tarefa : atribui Freelancer >
+Atribuicao "1" -- "1" Freelancer : alvo de <
+Atribuicao "1" -- "1" Organizacao : envolvida <
+Atribuicao "1" -- "1" Colaborador : executa <
+Atribuicao "1" -- "1" ProcessoSeriacao : resulta em <
+Atribuicao "1" -- "1" Classificacao : obedece a > 
+
+
+@enduml

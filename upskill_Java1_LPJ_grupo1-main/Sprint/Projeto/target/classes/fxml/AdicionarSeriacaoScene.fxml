@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.AdicionarSeriacaoUI">
+   <center>
+      <AnchorPane prefHeight="670.0" prefWidth="625.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="276.0" layoutY="13.0" text="Seriação">
+               <font>
+                  <Font name="Helvetica" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="128.0" prefHeight="14.0" prefWidth="173.0" text="Candidaturas Existentes">
+               <font>
+                  <Font name="Helvetica Light" size="11.0" />
+               </font>
+            </Label>
+            <ListView fx:id="listViewCandExistentes" layoutX="10.0" layoutY="142.0" prefHeight="450.0" prefWidth="200.0" />
+            <Label layoutX="415.0" layoutY="128.0" prefHeight="14.0" prefWidth="173.0" text="Candidaturas Selecionadas">
+               <font>
+                  <Font name="Helvetica Light" size="11.0" />
+               </font>
+            </Label>
+            <ListView fx:id="listViewClassifSelected" layoutX="415.0" layoutY="142.0" prefHeight="450.0" prefWidth="200.0" />
+            <Button fx:id="btnAddClass" layoutX="227.0" layoutY="259.0" mnemonicParsing="false" onAction="#actionAddCand" prefHeight="30.0" prefWidth="172.0" text="Adicionar para Posição">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="227.0" layoutY="364.0" mnemonicParsing="false" onAction="#actionRemoverCand" prefHeight="30.0" prefWidth="172.0" text="Remover">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAddColabs" defaultButton="true" layoutX="186.0" layoutY="636.0" mnemonicParsing="false" onAction="#actionAddColabParticipantes" prefHeight="30.0" text="Adicionar Colaboradores Participantes">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font></Button>
+            <Button layoutX="6.0" layoutY="636.0" mnemonicParsing="false" onAction="#actionCancelar" prefHeight="30.0" text="Cancelar">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

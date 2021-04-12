@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.TabTarefasUI">
+   <center>
+      <AnchorPane minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableViewTarefas" onMouseClicked="#clkTarefaView" prefHeight="486.0" prefWidth="800.0">
+               <columns>
+                  <TableColumn fx:id="tableViewTarefaDesignacao" prefWidth="130.0" text="Referência" />
+                  <TableColumn fx:id="tableViewTarefaDescInformal" prefWidth="165.0" text="Descrição Informal" />
+                  <TableColumn fx:id="tableViewDescricaoTecnica" prefWidth="165.0" text="Descrição Técnica" />
+                  <TableColumn fx:id="tableViewTarefaDuracao" prefWidth="90.0" text="Duração" />
+                  <TableColumn fx:id="tableViewTarefasCusto" prefWidth="90.0" text="Custo" />
+                  <TableColumn fx:id="tableViewTarefasCatTarefa" prefWidth="160.0" text="Categoria Tarefa" />
+               </columns>
+            </TableView>
+            <Button defaultButton="true" layoutX="565.0" layoutY="490.0" mnemonicParsing="false" onAction="#actionAdicionarNovaTarefa" prefHeight="30.0" prefWidth="230.0" text="Adicionar Nova Tarefa">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPublicarTarefa" defaultButton="true" layoutX="325.0" layoutY="490.0" mnemonicParsing="false" onAction="#actionPublicarTarefa" prefHeight="30.0" prefWidth="230.0" text="Publicar Tarefa">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.AdicionarCompetenciaTecnicaUI">
+   <left>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0">
+               <children>
+                  <TextField fx:id="txtCodUnico" layoutX="125.0" layoutY="172.0" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#actionLimitTxtCodUnico" prefHeight="30.0" prefWidth="200.0" promptText="Código único">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtDescBreve" layoutX="125.0" layoutY="222.0" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#actionLimitTxtDescBreve" prefHeight="30.0" prefWidth="200.0" promptText="Descrição Breve">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextArea fx:id="txtDescDetalhada" layoutX="125.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#actionLimitTxtDescDetalhada" prefHeight="100.0" prefWidth="200.0" promptText="Descrição Detalhada">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <ComboBox fx:id="cmbAreaAtividade" layoutX="125.0" layoutY="122.0" prefHeight="30.0" prefWidth="200.0" promptText="Área de Atividade" />
+                  <Button defaultButton="true" layoutX="125.0" layoutY="411.0" mnemonicParsing="false" onAction="#actionAdicionarNovaCompetenciaTecnica" prefHeight="30.0" prefWidth="200.0" text="Adicionar">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="138.0" layoutY="13.0" text="Competência Técnica">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </left>
+</BorderPane>

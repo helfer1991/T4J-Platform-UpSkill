@@ -1,0 +1,68 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class CompetenciaTecnica {
+  -String codigo
+  -String descBreve
+  -String descDetalhada
+  +CompetenciaTecnica(String cod, String dsBreve, String dsDet, AreaAtividade at)
+}
+
+class GrauProficiencia {
+  -String designacao
+  -String valor
+  +GrauProficiencia(String designacao, String valor)
+}
+
+class AreaAtividade {
+  -String codigo
+  -String descBreve
+  -String descDetalhada
+}
+
+class Plataforma {
+}
+
+
+class RegistarCompetenciaTecnicaController {
+  +List<AreaAtividade> getAreasAtividade()
+  +AreaAtividade getAreaAtividadeByCod(String atCod)
+  +void registarCompetenciaTecnica(String cod, String dsBreve, String dsDet, String atCod)
+  +void registarGrauProficiencia(String designacao, String valor)
+}
+
+class RegistarCompetenciaTecnicaUI {
+
+}
+
+class RepositorioAreaAtividadeDB {
+  +getAll()
+  +find(int id)
+}
+
+class RepositorioGrauProficienciaDB {
+  +save(GrauProficiencia gp)
+}
+
+class RepositorioCompetenciaTecnicaDB {
+  -save(CompetenciaTecnica ct)
+}
+
+RegistarCompetenciaTecnicaUI ..> RegistarCompetenciaTecnicaController
+RegistarCompetenciaTecnicaController ..> Plataforma
+RegistarCompetenciaTecnicaController ..> GrauProficiencia
+RegistarCompetenciaTecnicaController ..> AreaAtividade
+RegistarCompetenciaTecnicaController ..> CompetenciaTecnica
+RegistarCompetenciaTecnicaController ..> RepositorioGrauProficienciaDB
+RegistarCompetenciaTecnicaController ..> RepositorioAreaAtividadeDB
+RegistarCompetenciaTecnicaController ..> RepositorioCompetenciaTecnicaDB
+CompetenciaTecnica "*" -> "1" AreaAtividade : referente
+
+Plataforma "1" --> "*" AreaAtividade : possui
+Plataforma "1" --> "*" CompetenciaTecnica : possui
+
+CompetenciaTecnica "1" --> "1..*" GrauProficiencia : tem
+
+
+@enduml

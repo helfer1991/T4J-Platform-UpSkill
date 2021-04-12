@@ -1,0 +1,36 @@
+@startuml
+hide footbox
+autonumber
+actor "Freelancer" as COL
+
+participant ":Sistema" as SIST
+
+activate COL
+
+    COL -> SIST : inicia a candidatura a um anuncio
+
+    activate SIST
+        SIST --> COL : solicita escolha dum anuncio elegivel
+    deactivate SIST
+
+    COL -> SIST : selecciona anuncio para registar candidatura
+
+    activate SIST
+        SIST --> COL : solicita dados para a candidatura \n(i.e. valor pretendido, numero dias, texto apresentacao(opcional), texto motivacao(opcional))\n
+    deactivate SIST
+
+    COL -> SIST : introduz os dados solicitados
+
+    activate SIST
+        SIST --> COL : apresenta os dados e solicita confirmacao
+    deactivate SIST
+
+    COL -> SIST : confirma os dados
+
+    activate SIST
+        SIST --> COL : regista a nova candidatura e informa sucesso da operacao 
+    deactivate SIST
+
+deactivate COL
+
+@enduml

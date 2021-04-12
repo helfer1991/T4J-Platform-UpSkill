@@ -1,0 +1,66 @@
+@startuml
+autonumber
+
+actor "Colaborador de Organização" as ADM
+participant ":AdicionarAnuncioUI" as UI
+participant ":RegistarAnuncioController" as CTRL
+participant "RepositorioTipoRegimento" as RTREG
+participant ":UsersAPI" as SESSAO
+participant "RepositorioTarefa" as LTAF
+participant "anu\n:Anuncio" as ANU
+participant "RepositorioAnuncio" as RA
+database TipoRegimentoDB as regDB
+database TarefaDB as tafDB
+database AnuncioDB as anunDB
+
+activate ADM
+ADM -> UI : inicia a publicação selecionando uma tarefa
+activate UI
+
+UI -> CTRL : list1 = getAllTipoRegimentoDesignacao()
+activate CTRL
+
+CTRL -> RTREG: getRepositorioTipoRegimento()
+activate RTREG
+
+RTREG -> regDB: getAll()
+activate regDB
+deactivate regDB
+deactivate RTREG
+
+deactivate CTRL
+
+UI --> ADM : solicita os dados \n((i.e. período de publicação, período de apresentação de candidaturas, \nperíodo de seriação e tipo de regimento)
+deactivate UI
+|||
+
+ADM -> UI : introduz os dados solicitados e confirma
+activate UI
+
+UI -> CTRL : getColabByEmail()
+activate CTRL
+
+CTRL -> SESSAO : getEmail()
+activate SESSAO
+deactivate SESSAO
+deactivate CTRL
+
+UI -> CTRL : RegistaAnuncio(Date dtInicioPublicitacao, Date dtFimPublicitacao, \nDate dtInicioCandidatura, Date dtFimCandidatura, Date dtInicioSeriacao, \nDate dtFimSeriacao, Tarefa tarefa, Colaborador colab, TipoRegimento regimento)
+activate CTRL
+
+CTRL --> ANU ** : anun = create(dtInicioPublicitacao, dtFimPublicitacao, dtInicioCandidatura, \ndtFimCandidatura, dtInicioSeriacao, dtFimSeriacao, tarefa, colab, regimento)
+
+CTRL -> RA : getRepositorioAnuncio()
+activate RA
+
+RA -> anunDB : save(anun)
+activate anunDB
+deactivate anunDB
+
+deactivate RA
+deactivate CTRL
+
+UI --> ADM: informa do sucesso da operação
+deactivate UI
+
+@enduml

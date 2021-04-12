@@ -1,0 +1,48 @@
+@startuml
+title UC1_SD_RegistarGestorComoUtilizador
+autonumber
+
+participant "ro:Registo\nOrganizacoes" as ORGS
+participant "colab:Colaborador" as COLAB
+participant ":Plataforma" as PLAT
+participant "agp:AlgoritmoGeradorPasswords" as ALG << interface >>
+participant "uapi:UserAPIAdapter" as UAPI
+
+note over of ALG
+ É uma instância de qualquer classe
+ que implemente esta interface.
+end note
+
+ORGS -> ORGS: registaGestorComoUtilizador(colab)
+activate ORGS
+
+ORGS -> COLAB: nomeG = getNome()
+activate COLAB
+deactivate COLAB
+ORGS -> COLAB: emailG = getEmail()
+activate COLAB
+deactivate COLAB
+
+ORGS -> PLAT : agp=getAlgoritmoGeradorPwd()
+activate PLAT
+deactivate PLAT
+
+ORGS -> ALG: pwd = geraPassword(nomeG, emailG)
+activate ALG
+deactivate ALG
+
+ORGS -> PLAT : uapi = getUserAPIAdapter()
+activate PLAT
+deactivate PLAT
+
+ORGS -> UAPI: registerUserWithRoles(nomeG,emailG,pwd,["GESTOR","COLABORADOR"])
+activate UAPI
+deactivate UAPI
+
+
+ORGS -> ORGS: enviaPwd(emailG, pwd)
+activate ORGS
+deactivate ORGS
+
+deactivate ORGS
+@enduml

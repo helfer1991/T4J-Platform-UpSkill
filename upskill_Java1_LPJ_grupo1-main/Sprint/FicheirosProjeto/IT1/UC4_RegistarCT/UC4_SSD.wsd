@@ -1,0 +1,33 @@
+@startuml
+autonumber
+actor "Administrativo" as ADM
+
+activate ADM
+ADM -> ":Sistema" : inicia a especificação de uma competência técnica
+activate ":Sistema"
+":Sistema" --> ADM : solicita os dados \n(código, área de atividade, descrição breve e detalhada)
+deactivate ":Sistema"
+
+ADM -> ":Sistema" : introduz os dados solicitados
+activate ":Sistema"
+
+loop
+":Sistema" --> ADM : solicita os vários graus de proficiência aplicaveis
+deactivate ":Sistema"
+
+ADM -> ":Sistema" : introduz os dados de cada grau
+activate ":Sistema"
+end loop
+
+
+":Sistema" --> ADM : apresenta os dados e solicita confirmação
+deactivate ":Sistema"
+
+ADM -> ":Sistema" : confirma os dados
+activate ":Sistema"
+":Sistema" --> ADM : informa do sucesso da operação
+deactivate ":Sistema"
+
+deactivate ADM
+
+@enduml

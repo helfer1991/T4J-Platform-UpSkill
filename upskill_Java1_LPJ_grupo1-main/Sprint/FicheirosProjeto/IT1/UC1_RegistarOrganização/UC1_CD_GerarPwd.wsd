@@ -1,0 +1,50 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+hide attributes
+
+note left of AlgoritmoGeradorPasswords
+Esta interface será alvo
+de multiplas implementações,
+uma por cada algoritmo externo
+que tenha que ser suportado.
+end note
+
+interface AlgoritmoGeradorPasswords << interface >>
+{
+ +String geraPassword(String nome, String email)
+}
+
+
+class AlgoritmoGeradorPasswordsAdapter1
+{
++String geraPassword(String nome, String email)
+}
+
+class AlgoritmoExterno1API
+{
+    +String randomPassword()
+    +String randomPassword(Integer minChars, Integer maxChars)
+}
+
+AlgoritmoGeradorPasswords <|.. AlgoritmoGeradorPasswordsAdapter1
+AlgoritmoGeradorPasswordsAdapter1 -d->  AlgoritmoExterno1API
+
+class AlgoritmoGeradorPasswordsAdapter2
+{
++String geraPassword(String nome, String email)
+}
+
+class AlgoritmoExterno2API
+{
+    +Password generatePassword()
+    +Password generatePassword(String feedChars)
+    +Paswword generatePassword(Integer strength)
+    +Paswword generatePassword(Integer strength, String feedChars)
+}
+
+AlgoritmoGeradorPasswords <|.. AlgoritmoGeradorPasswordsAdapter2
+AlgoritmoGeradorPasswordsAdapter2 -d->  AlgoritmoExterno2API
+
+
+@enduml

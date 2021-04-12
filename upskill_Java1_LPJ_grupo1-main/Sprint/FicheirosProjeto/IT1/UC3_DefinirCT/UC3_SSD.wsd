@@ -1,0 +1,47 @@
+@startuml
+
+autonumber
+
+actor "Administrativo" as ADM
+
+participant ":Sistema" as SIST
+
+activate ADM
+
+ADM -> SIST : inicia definição de nova categoria de tarefa
+activate SIST
+SIST --> ADM : mostra a lista de áreas de atividade e solicita a descrição da categoria \nde tarefa e a escolha de uma área de atividade
+deactivate SIST
+
+ADM -> SIST : introduz a descrição e seleciona a área de atividade pretendida
+activate SIST
+SIST --> ADM : mostra a lista de competências técnicas associadas à área de \natividade especificada e solicita a escolha de uma delas, quando existentes
+deactivate SIST
+
+loop
+ADM -> SIST : seleciona competência técnica solicitada
+activate SIST
+SIST --> ADM : mostra graus de proficiência relativos à competência técnica selecionada
+deactivate SIST
+
+ADM -> SIST: seleciona o grau de proficiencia mínimo
+activate SIST
+
+SIST --> ADM : solicita indicação do seu caráter \n (i.e. obrigatória ou desejável)
+deactivate SIST
+
+ADM -> SIST : introduz informação pedida
+|||
+activate SIST
+end loop
+SIST --> ADM : apresenta dados e solicita confirmação
+deactivate SIST
+
+ADM -> SIST : confirma
+activate SIST
+SIST --> ADM : informa operação bem sucedida
+deactivate SIST
+
+deactivate ADM
+
+@enduml

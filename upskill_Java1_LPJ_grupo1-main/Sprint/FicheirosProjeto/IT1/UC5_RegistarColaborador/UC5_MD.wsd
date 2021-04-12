@@ -1,0 +1,42 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+hide methods
+left to right direction
+
+class Plataforma {
+  -String designacao
+}
+
+class Organizacao {
+  -String nome
+  -String NIF
+  -String website
+  -String telefone
+  -String email
+}
+
+class Colaborador {
+  -String nome
+  -String funcao
+  -String telefone
+  -String email
+}
+
+class Utilizador {
+  -String nome
+  -String email
+  -String password
+}
+
+class AlgoritmoGeradorPasswords #DeepSkyBlue {
+}
+
+Plataforma "1" -- "*" Organizacao : tem registadas >
+Organizacao "1" -- "1..*" Colaborador: tem >
+Organizacao "1" -- "1" Colaborador: tem gestor >
+Colaborador "0..1" -- "1" Utilizador : atua como >
+Plataforma "1" -- "1" AlgoritmoGeradorPasswords #DeepSkyBlue : recorre a >
+AlgoritmoGeradorPasswords "1" -- "*" Utilizador #DeepSkyBlue : gera password >
+
+@enduml

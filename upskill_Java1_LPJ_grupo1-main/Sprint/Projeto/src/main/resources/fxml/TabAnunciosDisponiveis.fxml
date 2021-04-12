@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.TabAnunciosDisponiveisUI">
+   <center>
+      <AnchorPane prefHeight="551.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableViewAnuncio" maxWidth="-Infinity" onMouseClicked="#clkAnuncio" prefHeight="486.0" prefWidth="800.0">
+              <columns>
+                <TableColumn fx:id="tableViewAnuncioId" prefWidth="130.0" text="Id Anúncio" />
+                <TableColumn fx:id="tableViewDesignacao" prefWidth="150.0" text="Designação" />
+                  <TableColumn fx:id="tableViewDescInformal" prefWidth="170.0" text="Descrição Informal" />
+                  <TableColumn fx:id="tableViewDescTecnica" prefWidth="200.0" text="Descrição Tecnica" />
+                  <TableColumn fx:id="tableViewTipoRegimento" prefWidth="150.0" text="Tipo Regimento" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnCandidatarAnuncio" defaultButton="true" layoutX="565.0" layoutY="490.0" mnemonicParsing="false" onAction="#actionCandidatarAnuncio" prefHeight="30.0" prefWidth="230.0" text="Candidatar ao anúncio">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

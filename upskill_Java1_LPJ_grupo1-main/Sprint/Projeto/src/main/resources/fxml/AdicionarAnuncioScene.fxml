@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.AdicionarAnuncioUI">
+   <top>
+      <StackPane prefHeight="500.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="500.0" prefWidth="450.0">
+               <children>
+                  <ComboBox fx:id="cmbTipoRegimento" layoutX="110.0" layoutY="91.0" prefWidth="230.0" promptText="Tipo de Regimento" />
+                  <DatePicker fx:id="dtInicioP" layoutX="110.0" layoutY="131.0" prefWidth="230.0" promptText="Data de Início da Publicação" />
+                  <DatePicker fx:id="dtFimP" layoutX="110.0" layoutY="171.0" prefWidth="230.0" promptText="Data de Fim da Publicação" />
+                  <DatePicker fx:id="dtInicioCand" layoutX="110.0" layoutY="211.0" prefWidth="230.0" promptText="Data de Início da Candidatura" />
+                  <DatePicker fx:id="dtFimCand" layoutX="110.0" layoutY="251.0" prefWidth="230.0" promptText="Data de Fim da Candidatura" />
+                  <DatePicker fx:id="dtInicioS" layoutX="110.0" layoutY="291.0" prefWidth="230.0" promptText="Data de Início de Seriação" />
+                  <DatePicker fx:id="dtFimS" layoutX="110.0" layoutY="331.0" prefWidth="230.0" promptText="Data de Fim de Seriação" />
+                  <Button fx:id="btnAdicionarAnuncio" defaultButton="true" layoutX="110.0" layoutY="411.0" mnemonicParsing="false" onAction="#actionAdicionarAnuncio" prefHeight="30.0" prefWidth="230.0" text="Adicionar">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="192.0" layoutY="13.0" text="Anúncio">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </top>
+</BorderPane>

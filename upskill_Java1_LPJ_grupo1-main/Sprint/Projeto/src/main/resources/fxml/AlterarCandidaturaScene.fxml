@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ui.AlterarCandidaturaUI">
+   <center>
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="422.0" prefWidth="500.0">
+               <children>
+                  <TextField fx:id="valorPretendido" layoutX="125.0" layoutY="86.0" prefHeight="30.0" prefWidth="200.0" promptText="Valor Pretendido (em POTS)" />
+                  <TextField fx:id="nrDias" layoutX="125.0" layoutY="126.0" prefHeight="30.0" prefWidth="200.0" promptText="Tempo de execução (em dias)" />
+                  <TextArea fx:id="txtApr" layoutX="125.0" layoutY="166.0" prefHeight="100.0" prefWidth="200.0" promptText="Texto de apresentação (opcional)" />
+                  <TextArea fx:id="txtMotiv" layoutX="125.0" layoutY="276.0" prefHeight="100.0" prefWidth="200.0" promptText="Texto de motivação     (opcional)" />
+                  <Button fx:id="btnCancelar" layoutX="8.0" layoutY="465.0" mnemonicParsing="false" onAction="#actionCancelar" text="Cancelar">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAlterar" defaultButton="true" layoutX="125.0" layoutY="411.0" mnemonicParsing="false" onAction="#actionAlterar" prefHeight="30.0" prefWidth="200.0" text="Alterar">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="176.0" layoutY="13.0" text="Candidatura">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

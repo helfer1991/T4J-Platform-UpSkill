@@ -1,0 +1,39 @@
+@startuml
+autonumber
+
+actor "Colaborador" as COLAB
+
+participant ":Sistema" as SIST
+
+activate COLAB
+
+COLAB -> SIST : inicia o processo não automático de seriação dos candidatos à realização de um anúncio
+activate SIST
+SIST --> COLAB : mostra os anúncios publicados pelo colaborador em fase de seriação não automática \ne que ainda não foram seriados e pede-lhe para escolher um
+deactivate SIST
+
+COLAB -> SIST : seleciona um anúncio
+activate SIST
+
+SIST --> COLAB : mostra as candidaturas existente e solicita a sua classificação
+loop
+COLAB -> SIST : classifica candidatura
+end loop
+activate SIST
+SIST --> COLAB : mostra os colaboradores da organização e pede para selecionar os outros participantes
+deactivate SIST
+
+loop
+COLAB -> SIST : seleciona outros colaboradores participantes
+activate SIST
+end loop
+SIST --> COLAB : apresenta os dados e solicita confirmação
+deactivate SIST
+
+COLAB -> SIST : confirma
+activate SIST
+SIST --> COLAB : informa do sucesso da operação
+deactivate SIST
+
+deactivate COLAB
+@enduml

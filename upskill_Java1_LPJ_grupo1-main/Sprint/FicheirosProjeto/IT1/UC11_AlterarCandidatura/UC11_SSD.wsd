@@ -1,0 +1,36 @@
+@startuml
+hide footbox
+autonumber
+actor "Freelancer" as COL
+
+participant ":Sistema" as SIST
+
+activate COL
+
+    COL -> SIST : inicia a alteração de uma candidatura
+
+    activate SIST
+        SIST --> COL : solicita a escolha de uma das candidaturas por si efetuadas e, ainda, em período de candidaturas
+    deactivate SIST
+
+    COL -> SIST : selecciona candidatura
+
+    activate SIST
+        SIST --> COL : solicita a introdução de novos dados (i.e. os que pretende alterar, mantendo os restantes iguais)
+    deactivate SIST
+
+    COL -> SIST : introduz a nova informação
+
+    activate SIST
+        SIST --> COL : valida e apresenta os dados ao Freelancer e pede a sua confirmação
+    deactivate SIST
+
+    COL -> SIST : confirma os dados
+
+    activate SIST
+        SIST --> COL : regista a alteração à candidatura, informando o Freelancer do sucesso da operação
+    deactivate SIST
+
+deactivate COL
+
+@enduml

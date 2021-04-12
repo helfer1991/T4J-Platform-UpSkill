@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="102px" preserveAspectRatio="none" style="width:356px;height:102px;" version="1.1" viewBox="0 0 356 102" width="356px" zoomAndPan="magnify"><defs><filter height="300%" id="fo2117ja05oum" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[02456e6632d968d6f68141e5893c6991]
+class AreaAtividade--><rect codeLine="5" fill="#FEFECE" filter="url(#fo2117ja05oum)" height="81.5078" id="AreaAtividade" style="stroke:#A80036;stroke-width:1.5;" width="119" x="223" y="7"/><ellipse cx="243.85" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M246.6156,18.875 Q246.7719,18.6563 246.9594,18.5469 Q247.1469,18.4375 247.3656,18.4375 Q247.7406,18.4375 247.975,18.7031 Q248.2094,18.9531 248.2094,19.5625 L248.2094,21.0156 Q248.2094,21.625 247.975,21.8906 Q247.7406,22.1563 247.3656,22.1563 Q247.0219,22.1563 246.8188,21.9531 Q246.6156,21.7656 246.5063,21.25 Q246.4594,20.8906 246.2719,20.7031 Q245.9438,20.3281 245.3344,20.1094 Q244.725,19.8906 244.1,19.8906 Q243.3344,19.8906 242.6938,20.2188 Q242.0688,20.5469 241.5688,21.2969 Q241.0844,22.0469 241.0844,23.0781 L241.0844,24.1719 Q241.0844,25.4063 241.975,26.2344 Q242.8656,27.0469 244.4594,27.0469 Q245.3969,27.0469 246.0531,26.7969 Q246.4438,26.6406 246.8656,26.2031 Q247.1313,25.9375 247.2719,25.8594 Q247.4281,25.7813 247.6313,25.7813 Q247.9594,25.7813 248.2094,26.0469 Q248.475,26.2969 248.475,26.6406 Q248.475,26.9844 248.1313,27.3906 Q247.6313,27.9688 246.8344,28.2969 Q245.7563,28.75 244.4594,28.75 Q242.9438,28.75 241.7406,28.125 Q240.7563,27.625 240.0688,26.5625 Q239.3813,25.4844 239.3813,24.2031 L239.3813,23.0469 Q239.3813,21.7188 239.9906,20.5781 Q240.6156,19.4219 241.7094,18.8125 Q242.8031,18.1875 244.0375,18.1875 Q244.7719,18.1875 245.4125,18.3594 Q246.0688,18.5156 246.6156,18.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="74" x="259.15" y="27.9102">AreaAtividade</text><line style="stroke:#A80036;stroke-width:1.5;" x1="224" x2="341" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="67" x="229" y="54.4189">-String codigo</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="88" x="229" y="68.2549">-String descBreve</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="229" y="82.0908">-String descDetalhada</text><!--MD5=[ecaed46f78f8cfe1e9ce18477649be18]
+class Plataforma--><rect codeLine="12" fill="#FEFECE" filter="url(#fo2117ja05oum)" height="53.8359" id="Plataforma" style="stroke:#A80036;stroke-width:1.5;" width="103" x="7" y="21"/><ellipse cx="26.95" cy="37" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M29.7156,32.875 Q29.8719,32.6563 30.0594,32.5469 Q30.2469,32.4375 30.4656,32.4375 Q30.8406,32.4375 31.075,32.7031 Q31.3094,32.9531 31.3094,33.5625 L31.3094,35.0156 Q31.3094,35.625 31.075,35.8906 Q30.8406,36.1563 30.4656,36.1563 Q30.1219,36.1563 29.9188,35.9531 Q29.7156,35.7656 29.6063,35.25 Q29.5594,34.8906 29.3719,34.7031 Q29.0438,34.3281 28.4344,34.1094 Q27.825,33.8906 27.2,33.8906 Q26.4344,33.8906 25.7938,34.2188 Q25.1688,34.5469 24.6688,35.2969 Q24.1844,36.0469 24.1844,37.0781 L24.1844,38.1719 Q24.1844,39.4063 25.075,40.2344 Q25.9656,41.0469 27.5594,41.0469 Q28.4969,41.0469 29.1531,40.7969 Q29.5438,40.6406 29.9656,40.2031 Q30.2313,39.9375 30.3719,39.8594 Q30.5281,39.7813 30.7313,39.7813 Q31.0594,39.7813 31.3094,40.0469 Q31.575,40.2969 31.575,40.6406 Q31.575,40.9844 31.2313,41.3906 Q30.7313,41.9688 29.9344,42.2969 Q28.8563,42.75 27.5594,42.75 Q26.0438,42.75 24.8406,42.125 Q23.8563,41.625 23.1688,40.5625 Q22.4813,39.4844 22.4813,38.2031 L22.4813,37.0469 Q22.4813,35.7188 23.0906,34.5781 Q23.7156,33.4219 24.8094,32.8125 Q25.9031,32.1875 27.1375,32.1875 Q27.8719,32.1875 28.5125,32.3594 Q29.1688,32.5156 29.7156,32.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="42.05" y="41.9102">Plataforma</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="109" y1="53" y2="53"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="91" x="13" y="68.4189">-String designacao</text><!--MD5=[718b46c9a1975c175f4073d63ce5ccba]
+link Plataforma to AreaAtividade--><path codeLine="16" d="M110.153,48 C143.681,48 187.764,48 222.819,48 " fill="none" id="Plataforma-AreaAtividade" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="150,39.1758,140.9549,36.2369,140.9549,42.1147,150,39.1758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="38" x="154" y="44.4951">possui</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="117.9089" y="62.6564">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="209.8521" y="62.5742">*</text><!--MD5=[9d1a73104cf2ca7093aec73c4f7b3cea]
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+class AreaAtividade {
+  -String codigo
+  -String descBreve
+  -String descDetalhada
+ 
+}
+
+class Plataforma {
+  -String designacao
+}
+
+Plataforma "1" - - "*" AreaAtividade : possui >
+@enduml
+
+PlantUML version 1.2020.22(Sun Dec 06 09:36:27 WET 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

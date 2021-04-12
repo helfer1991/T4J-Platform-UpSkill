@@ -1,0 +1,87 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrativo" as ADM
+
+participant ":RegistarFreelancerUI" as UI
+participant ":RegistarFreelancerController" as CTRL
+participant ":Plataforma" as PLAT
+participant ":UsersAPI" as UAPI
+participant "free: Freelancer" as FR
+participant "ha: HabilitacaoAcademica" as HA
+participant "rct: ReconhecimentoCompetenciaTecnica" as RCT
+participant "ep: EnderecoPostal" as EP
+database RepositorioFreelancerDB as freeDB
+
+
+activate ADM
+
+ADM -> UI : inicia o registo de um freelancer
+activate UI
+UI --> ADM : solicita os dados do freelancer (i.e., o nome, o NIF, o endereço postal, um contacto telefónico e email)
+deactivate UI
+
+ADM -> UI : introduz os dados solicitados
+activate UI
+UI -> CTRL : registarFreelancer(nome, nif, codPostal, tlf, email)
+activate CTRL
+CTRL -> PLAT : registaFreelancerAPI(nome,email,tlf,password,role)
+activate PLAT
+PLAT -> UAPI : registaFreelancerAPI(nome,email,tlf,password,role)
+activate UAPI
+deactivate UAPI
+deactivate PLAT
+deactivate FR
+deactivate CTRL
+
+loop
+UI --> ADM : solicita a introdução de uma habilitação académica (grau, designação do curso, instituição e média do curso)
+deactivate UI
+ADM -> UI : introduz os dados solicitados
+activate UI
+UI -> CTRL : registarHabilitacaoAcademica(grau, nomeCurso, fac, media)
+activate CTRL
+CTRL ->  FR : registarHabilitacaoAcademica(grau, nomeCurso, fac, media)
+activate FR
+FR -> HA** : lHab = create(grau, nomeCurso, fac, media)
+
+deactivate FR
+
+deactivate CTRL
+end loop
+
+loop
+UI --> ADM : solicita a introdução de reconhecimento de competências técnicas (data, competência técnica, grau de proficiência)
+deactivate UI
+ADM -> UI : introduz os dados solicitados
+activate UI
+UI -> CTRL : registarReconhecimentoCT(data, compTecnica, grauProficiencia)
+activate CTRL
+CTRL -> CTRL : registarReconhecimentoCT(data, compTecnica, grauProficiencia)
+CTRL -> RCT** : create(data, compTecnica, grauProficiencia)
+deactivate CTRL
+end loop 
+
+
+
+UI --> ADM : apresenta dados e solicita confirmação
+deactivate UI
+
+ADM -> UI : confirma
+activate UI
+UI -> CTRL : registarFreelancer(nome,nif,email,tlf,morada,codpostal,localidade,lHab,lRecFree)
+activate CTRL
+CTRL -> FR** : free = create(nome,nif,email,tlf,morada,codpostal,localidade,lHab,lRecFree)
+activate FR
+FR --> EP** : create(codPostal,morada,localidade)
+deactivate FR
+CTRL -> freeDB : save(free)
+activate freeDB
+deactivate freeDB
+UI --> ADM : informa sucesso da operação
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+
+@enduml
